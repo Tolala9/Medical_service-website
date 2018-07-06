@@ -1,0 +1,14 @@
+@import url(normalize.css);
+p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-top: 0;
+  background-color: #2F47CFFF; }
+
+h1 {
+  background-color: #2F47CFFF;
+  color: white; }
+
+div {
+  background-color: #2F47CFFF; }
