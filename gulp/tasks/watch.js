@@ -20,7 +20,7 @@ gulp.task('watch', function() {
   });
 
   // watch('./app/assets/scripts/**/*.js', function() {
-  //   gulp.start('scriptsRefresh');
+  //   gulp.start('waitForScripts');
   // });
 
 });
