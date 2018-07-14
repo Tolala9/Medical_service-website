@@ -1,4 +1,10 @@
-var Person = require('./modules/Person');
+var $ = require('jquery');
+import Person from './modules/Person';
 
-var jon = new Person("JON");
-jon.greet();
+alert("ABC 321");
+
+var john = new Person("John Doe", "blue");
+john.greet();
+
+
+$("h1").remove();

@@ -19,9 +19,9 @@ gulp.task('watch', function() {
     gulp.start('waitForStyles');
   });
 
-  // watch('./app/assets/scripts/**/*.js', function() {
-  //   gulp.start('waitForScripts');
-  // });
+  watch('./app/assets/scripts/**/*.js', function() {
+    gulp.start('waitForScripts');
+  });
 
 });
 
@@ -30,8 +30,8 @@ gulp.task('waitForStyles', ['styles'], function(){
   .pipe(browserSync.stream());
 });
 
-// gulp.task('waitForScripts', ['scripts'], function(){
-//   browserSync.reload();
-// });
+gulp.task('waitForScripts', ['scripts'], function(){
+  browserSync.reload();
+});
 
 gulp.task('default', ['watch']);
