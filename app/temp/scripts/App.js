@@ -79,12 +79,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var $ = __webpack_require__(2);
 
 
-alert("ABC 321");
+// alert("ABC 321");
 
 var john = new _Person2.default("John Doe", "blue");
 john.greet();
 
-$("h1").remove();
+// $("h1").remove();//test jquery
 
 /***/ }),
 /* 1 */
