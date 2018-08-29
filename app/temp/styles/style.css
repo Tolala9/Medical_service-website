@@ -79,20 +79,66 @@ img {
 .fas {
   font-family: "font-awesome-sol"; }
 
-p {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  margin-top: 0;
-  font-family: "cinzel-ex";
-  font-weight: 700; }
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; }
 
-h1 {
-  background-color: #2F47CFFF;
-  color: white; }
+.site-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 15px; }
+  .site-header__logo {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .site-header__menu-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+  .site-header__search {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto; }
+    .site-header__search a {
+      color: #4d4d4d;
+      font-size: 20px;
+      -webkit-transition: 0.25s ease-out;
+      -o-transition: 0.25s ease-out;
+      transition: 0.25s ease-out; }
+      .site-header__search a:hover {
+        color: #00BB6D; }
 
-div {
-  background-color: #2F47CFFF; }
-
-span {
-  font-weight: 800; }
+.primary-nav {
+  margin: auto 0; }
+  .primary-nav ul {
+    margin: 0;
+    padding: 0; }
+    .primary-nav ul li {
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 25px; }
+      .primary-nav ul li:first-child {
+        margin-left: 0; }
+    .primary-nav ul a {
+      text-decoration: none;
+      color: #001515;
+      font-weight: 400;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      -webkit-transition: 0.25s ease-out;
+      -o-transition: 0.25s ease-out;
+      transition: 0.25s ease-out; }
+      .primary-nav ul a:hover {
+        color: #00BB6D; }

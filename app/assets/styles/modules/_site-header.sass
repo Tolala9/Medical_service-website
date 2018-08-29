@@ -1,0 +1,40 @@
+.site-header
+	display: flex
+	padding: 40px 15px
+	&__logo
+		flex: 1
+	&__menu-content
+		display: flex
+		flex: 3
+	&__search
+		display: flex
+		margin: auto
+		a
+			color: $greyText
+			font-size: 20px
+			transition: 0.25s ease-out
+			&:hover 
+				color: $greenText
+	
+.primary-nav
+	margin: auto 0
+	ul
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			list-style-type: none
+			margin-left: 25px
+			&:first-child
+				margin-left: 0
+		a
+			text-decoration: none
+			color: $blackText
+			font-weight: 400
+			font-size: 16px
+			font-family: 'Montserrat', sans-serif
+			transition: 0.25s ease-out
+			&:hover 
+				color: $greenText
+
+

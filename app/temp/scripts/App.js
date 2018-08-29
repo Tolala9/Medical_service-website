@@ -112,7 +112,7 @@ var Person = function () {
   _createClass(Person, [{
     key: "greet",
     value: function greet() {
-      console.log("Hi there, my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
+      console.log("Hi there! my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
     }
   }]);
 
