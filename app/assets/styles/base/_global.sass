@@ -8,8 +8,40 @@ body
   line-height: 1.71429
   letter-spacing: 0.05em
   color: $greyText;
+  background-color: #fff;
 
-ul
+h1, h2, h3, h4, h5, h6, 
+  margin-top: 0
+  margin-bottom: 0
+  font-family: "Montserrat", sans-serif
+  font-weight: 400
+  letter-spacing: 0.05em
+  color: #151515
+h1
+  font-size: 38px
+  line-height: 1.2
+h2
+  font-size: 32px
+  line-height: 1.2
+h3
+  font-size: 24px
+  line-height: 1.2
+h4
+  font-size: 20px
+  line-height: 1.2
+h4
+  font-size: 18px
+  line-height: 1.441
+h4
+  font-size: 15px
+  line-height: 1.2
+hr 
+  margin-top: 0
+  margin-bottom: 0
+  border-top: 1px solid #90959e
+
+
+ul, ol
   display: block
   list-style: none;
   padding: 0
@@ -20,7 +52,11 @@ li
 a
   text-decoration: none
 
+p
+  margin: 0
+
 img
+  display: inline-block
   max-width: 100%
   height: auto
 
@@ -31,3 +67,28 @@ img
 .fas
 	font-family: "font-awesome-sol"
 
+.divider 
+  line-height: 0
+.divider-section 
+  width: 100%
+  display: block
+  height: 100px
+  &-xs
+    height: 40px
+
+.page 
+  position: relative
+  overflow: hidden
+  min-height: 100vh !important
+
+
+.page > * 
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+
+.page-header 
+  padding: 0
+  margin: 0
+  border-bottom: none
