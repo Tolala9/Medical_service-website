@@ -6,6 +6,7 @@ class Person {
 
   greet() {
     console.log("Hi there! my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
+    $("h1").remove();//test jquery
   }
 }
 

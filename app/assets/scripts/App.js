@@ -1,10 +1,16 @@
-var $ = require('jquery');
+// 3rd party packages from NPM
+// var $ = require('jquery');
+
+// Our modules / classes
 import Person from './modules/Person';
+// import OwlCarousel from './modules/owl-carousel';
 
-// alert("ABC 321");
-
+// Instantiate a new object using our modules/classes
 var john = new Person("John Doe", "blue");
 john.greet();
+// var owlCarousel = new OwlCarousel();
+
+
 
 
 // $("h1").remove();//test jquery

@@ -2,7 +2,7 @@ var gulp       = require('gulp'),
 watch          = require('gulp-watch'),
 browserSync    = require('browser-sync').create();
 
-gulp.task('watch', function() {
+gulp.task('watch', ['coreJs'], function() {
 
   browserSync.init({
       server: {
@@ -23,6 +23,10 @@ gulp.task('watch', function() {
     gulp.start('waitForScripts');
   });
 
+  watch('./app/assets/libs/**/*.js', function() {
+    gulp.start('waitForCore');
+  });
+
 });
 
 gulp.task('waitForStyles', ['styles'], function(){
@@ -31,6 +35,10 @@ gulp.task('waitForStyles', ['styles'], function(){
 });
 
 gulp.task('waitForScripts', ['scripts'], function(){
+  browserSync.reload();
+});
+
+gulp.task('waitForCore', ['coreJs'], function(){
   browserSync.reload();
 });
 
