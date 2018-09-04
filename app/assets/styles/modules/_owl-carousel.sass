@@ -63,6 +63,8 @@
 		.owl-dot
 			cursor: pointer
 			user-select: none
+		
+			
 	&.owl-loaded
 		display: block
 	&.owl-loading
@@ -74,8 +76,8 @@
 		display: none
 	.owl-item
 		position: relative
-		width: 239.75px //manual typed
-		margin-right: 30px // manual typed
+		// width: 239.75px //manual typed
+		// margin-right: 30px // manual typed
 		min-height: 1px
 		float: left
 		-webkit-backface-visibility: hidden
@@ -226,6 +228,10 @@
 		left: 0
 	.owl-arrow-next
 		right: 0
+
+.owl-prev, .owl-next
+	display: none
+
 
 @media (min-width: 768px)
 	.owl-carousel-wrap .owl-outer-navigation

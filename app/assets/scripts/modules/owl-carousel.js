@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 class OwlCarousel{
 
@@ -7,16 +7,84 @@ class OwlCarousel{
 	}
 
 
-	 allMethods() {
-		/**
+  allMethods() {
+    (function () {
+
+  /**
+   * Global variables
+   */
+
+   var userAgent = navigator.userAgent.toLowerCase(),
+   initialDate = new Date(),
+
+   $document = $(document),
+   $window = $(window),
+   $html = $("html"),
+   $body = $('body'),
+
+   isDesktop = $html.hasClass("desktop"),
+   isRtl = $html.attr("dir") === "rtl",
+   isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+   isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+   isTouch = "ontouchstart" in window,
+   onloadCaptchaCallback,
+   plugins = {
+    pointerEvents: isIE < 11 ? "js/pointer-events.min.js" : false,
+    bootstrapTooltip: $("[data-toggle='tooltip']"),
+    bootstrapModalDialog: $('.modal'),
+    bootstrapTabs: $(".tabs-custom-init"),
+    rdNavbar: $(".rd-navbar"),
+    materialParallax: $(".parallax-container"),
+    rdGoogleMaps: $(".rd-google-map"),
+    rdMailForm: $(".rd-mailform"),
+    rdInputLabel: $(".form-label"),
+    regula: $("[data-constraints]"),
+    owl: $(".owl-carousel"),
+    swiper: $(".swiper-slider"),
+    search: $(".rd-search"),
+    searchResults: $('.rd-search-results'),
+    statefulButton: $('.btn-stateful'),
+    isotope: $(".isotope"),
+    popover: $('[data-toggle="popover"]'),
+    viewAnimate: $('.view-animate'),
+    radio: $("input[type='radio']"),
+    checkbox: $("input[type='checkbox']"),
+    customToggle: $("[data-custom-toggle]"),
+    facebookWidget: $('#fb-root'),
+    counter: $(".counter"),
+    progressLinear: $(".progress-linear"),
+    circleProgress: $(".progress-bar-circle"),
+    dateCountdown: $('.DateCountdown'),
+    pageLoader: $(".page-loader"),
+    selectFilter: $("select"),
+    captcha: $('.recaptcha'),
+    scroller: $(".scroll-wrap"),
+    lightGallery: $("[data-lightgallery='group']"),
+    lightGalleryItem: $("[data-lightgallery='item']"),
+    mailchimp: $('.mailchimp-mailform'),
+    campaignMonitor: $('.campaign-mailform'),
+    copyrightYear: $(".copyright-year"),
+    cdScheduleWrap: $(".cd-schedule-wrap"),
+    slick: $('.slick-slider'),
+    maps: $(".google-map-container")
+  };
+
+  /**
+   * Initialize All Scripts
+   */
+   $document.ready(function () {
+    var isNoviBuilder = window.xMode;
+
+
+    /**
      * initOwlCarousel
      * @description  Init owl carousel plugin
      */
-    function initOwlCarousel(c) {
+     function initOwlCarousel(c) {
       var aliaces = ["-", "-xs-", "-sm-", "-md-", "-lg-", "-xl-"],
-        values = [0, 480, 768, 992, 1200, 1475],
-        responsive = {},
-        j, k;
+      values = [0, 480, 768, 992, 1200, 1475],
+      responsive = {},
+      j, k;
 
       for (j = 0; j < values.length; j++) {
         responsive[values[j]] = {};
@@ -37,8 +105,8 @@ class OwlCarousel{
       if (c.attr('data-dots-custom')) {
         c.on("initialized.owl.carousel", function (event) {
           var carousel = $(event.currentTarget),
-            customPag = $(carousel.attr("data-dots-custom")),
-            active = 0;
+          customPag = $(carousel.attr("data-dots-custom")),
+          active = 0;
 
           if (carousel.attr('data-active')) {
             active = parseInt(carousel.attr('data-active'), 10);
@@ -63,7 +131,7 @@ class OwlCarousel{
       if (c.attr('data-nav-custom')) {
         c.on("initialized.owl.carousel", function (event) {
           var carousel = $(event.currentTarget),
-            customNav = $(carousel.attr("data-nav-custom"));
+          customNav = $(carousel.attr("data-nav-custom"));
 
           // Custom Navigation Events
           customNav.find(".owl-arrow-next").click(function (e) {
@@ -87,7 +155,7 @@ class OwlCarousel{
         items: 1,
         rtl: isRtl,
         dotsContainer: c.attr("data-pagination-class") || false,
-				autoplayHoverPause: true,
+        autoplayHoverPause: true,
         navContainer: c.attr("data-navigation-class") || false,
         mouseDrag: isNoviBuilder ? false : c.attr("data-mouse-drag") !== "false",
         nav: c.attr("data-nav") === "true",
@@ -100,6 +168,67 @@ class OwlCarousel{
         navClass: $.parseJSON(c.attr("data-nav-class")) || ['owl-prev', 'owl-next'],
       });
     }
-	}
+
+    
+
+    /**
+     * Owl carousel
+     * @description Enables Owl carousel plugin
+     */
+     if (plugins.owl.length) {
+      var i;
+      for (i = 0; i < plugins.owl.length; i++) {
+        var c = $(plugins.owl[i]);
+        //skip owl in bootstrap tabs
+        if (!c.parents('.tab-content').length) {
+          initOwlCarousel(c);
+        }
+      }
+    }
+
+   
+    /**
+     * lightGallery
+     * @description Enables lightGallery plugin
+     */
+     function initLightGallry(wrapperToInit, addClass) {
+      if (plugins.lightGallery.length && !isNoviBuilder) {
+        $(wrapperToInit).find(plugins.lightGallery.selector).lightGallery({
+          thumbnail: true,
+          selector: "[data-lightgallery='group-item']",
+          addClass: addClass
+        });
+      }
+
+      if (plugins.lightGalleryItem.length && !isNoviBuilder) {
+        $(wrapperToInit).find(plugins.lightGalleryItem.selector).lightGallery({
+          selector: "this",
+          addClass: addClass
+        });
+      }
+    }
+
+    if (plugins.lightGallery.length && !isNoviBuilder) {
+      initLightGallry('html');
+    }
+
+    if (plugins.lightGalleryItem.length && !isNoviBuilder) {
+      initLightGallry('html');
+    }
+
+   
+
+  });
+
+
+
+
+}());
+
+
+
+
 }
+}
+
 export default OwlCarousel;
