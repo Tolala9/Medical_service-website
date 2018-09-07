@@ -106,3 +106,55 @@ span.about-breafly__item--inner__decor
 					bottom: -12px
 		
 				
+.about-unit
+	padding: 30px
+	background-color: rgba(82, 98, 125, 0.8)
+	width: 100%
+	max-width: 100%
+	>p
+		margin-top: 18px	
+	&__quote
+		margin-top: 30px
+		&__body
+			margin-top: 20px
+			width: 100%
+			max-width: 100%
+			>p
+				margin-top: 5px
+			&__content
+				margin-top: 20px
+				display: flex
+				align-items: flex-start
+				&__icon
+					color: $white
+					.fas
+						font-size: 30px
+				&__text
+					margin-left: 15px
+					font-style: italic
+					color: $greyText
+					transform: translateY(-5px)
+
+.about-unit__quote__body__divider
+	margin-top: 20px
+	width: 100%
+	border-top: 1px solid $darkGrey
+
+
+@media only screen and (min-width: 1200px)
+	.about-unit
+		margin-left: 30px
+		padding: 30px
+
+@media only screen and (min-width: 768px)
+	.about-unit
+		&__quote
+			display: flex
+			align-items: center
+			&__img
+				flex-shrink: 0
+			&__body
+				margin-top: 0px
+				margin-left: 30px
+				width: 100%
+				max-width: 100%
