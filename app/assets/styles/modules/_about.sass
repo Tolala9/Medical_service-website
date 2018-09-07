@@ -1,0 +1,108 @@
+.about-breafly
+	&__item
+		&--inner
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			padding: 30px
+			min-height: 228px
+			width: 100%
+			text-align: center
+			background-color: rgba(82, 98, 125, 0.8)
+
+			.far, .fas
+				color: $greenText
+				font-size: 60px
+			p
+				color: $greyText
+
+
+@media only screen and (min-width: 768px)		
+	.about-breafly
+		display: flex
+		flex-wrap: wrap
+		overflow: hidden
+		&__item
+			flex-basis: 50%
+			&:nth-child(even)
+				text-align: right
+				position: relative
+			&:first-child, &:nth-child(2)
+				.about-breafly
+					&__item
+						&--inner
+							margin-top: 0px
+							
+			&:nth-child(1)
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 0
+					bottom: 12px
+					// width: 1px
+					border-left: 1px solid $darkGrey
+			&:nth-child(2)
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					bottom: 30px
+					left: 30px
+					right: 0
+					// height: 1px
+					border-top: 1px solid $darkGrey
+			&:nth-child(3)
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 30px
+					left: 0
+					right: 30px
+					// height: 1px
+					border-top: 1px solid $darkGrey
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 48
+					bottom: 12px
+					// width: 1px
+					border-left: 1px solid $darkGrey
+
+span.about-breafly__item--inner__decor
+	position: absolute
+	right: 0
+	top: 30px
+	width: 15px
+	height: 15px
+	background-color: $green
+	transform: translate(50%, -50%)
+
+
+			
+
+
+@media only screen and (min-width: 1200px)	and (min-width: 768px)		
+	.about-breafly
+		&__item
+			&--inner
+				max-width: calc(100% - 60px / 2)
+				margin-top: 60px
+
+			&:nth-child(1)
+				&:after
+					bottom: -12px
+			&:nth-child(2)
+				&:before
+					bottom: -30px
+			&:nth-child(3)
+				&:before
+					top: 30px
+				&:after
+					top: 48px
+					bottom: -12px
+		
+				

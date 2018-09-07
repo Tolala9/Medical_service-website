@@ -145,8 +145,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// import $ from 'jquery';
-
 var OwlCarousel = function () {
   function OwlCarousel() {
     _classCallCheck(this, OwlCarousel);
@@ -176,44 +174,9 @@ var OwlCarousel = function () {
             isTouch = "ontouchstart" in window,
             onloadCaptchaCallback,
             plugins = {
-          pointerEvents: isIE < 11 ? "js/pointer-events.min.js" : false,
-          bootstrapTooltip: $("[data-toggle='tooltip']"),
-          bootstrapModalDialog: $('.modal'),
-          bootstrapTabs: $(".tabs-custom-init"),
-          rdNavbar: $(".rd-navbar"),
-          materialParallax: $(".parallax-container"),
-          rdGoogleMaps: $(".rd-google-map"),
-          rdMailForm: $(".rd-mailform"),
-          rdInputLabel: $(".form-label"),
-          regula: $("[data-constraints]"),
           owl: $(".owl-carousel"),
-          swiper: $(".swiper-slider"),
-          search: $(".rd-search"),
-          searchResults: $('.rd-search-results'),
-          statefulButton: $('.btn-stateful'),
-          isotope: $(".isotope"),
-          popover: $('[data-toggle="popover"]'),
-          viewAnimate: $('.view-animate'),
-          radio: $("input[type='radio']"),
-          checkbox: $("input[type='checkbox']"),
-          customToggle: $("[data-custom-toggle]"),
-          facebookWidget: $('#fb-root'),
-          counter: $(".counter"),
-          progressLinear: $(".progress-linear"),
-          circleProgress: $(".progress-bar-circle"),
-          dateCountdown: $('.DateCountdown'),
-          pageLoader: $(".page-loader"),
-          selectFilter: $("select"),
-          captcha: $('.recaptcha'),
-          scroller: $(".scroll-wrap"),
           lightGallery: $("[data-lightgallery='group']"),
-          lightGalleryItem: $("[data-lightgallery='item']"),
-          mailchimp: $('.mailchimp-mailform'),
-          campaignMonitor: $('.campaign-mailform'),
-          copyrightYear: $(".copyright-year"),
-          cdScheduleWrap: $(".cd-schedule-wrap"),
-          slick: $('.slick-slider'),
-          maps: $(".google-map-container")
+          lightGalleryItem: $("[data-lightgallery='item']")
         };
 
         /**
