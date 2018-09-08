@@ -9,7 +9,8 @@ body {
   line-height: 1.71429;
   letter-spacing: 0.05em;
   color: #818DA2;
-  background-color: #fff; }
+  background-color: #fff;
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -191,6 +192,42 @@ img {
     transition: 0.25s ease-out; }
     .primary-nav ul a:hover {
       color: #00BB6D; }
+
+.section {
+  max-width: 1470px;
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto; }
+  .section--full-width {
+    max-width: none;
+    width: 100%; }
+  .section--white {
+    background-color: #fff; }
+
+@media (min-width: 1500px) {
+  .section {
+    width: 100%; } }
+
+.section-xs {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.section-sm, .section-md, .section-lg, .section-xl {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+@media (min-width: 1200px) {
+  .section-lg {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+  .section-xl {
+    padding-top: 140px;
+    padding-bottom: 140px; } }
+
+.section-relative {
+  position: relative;
+  z-index: 1; }
 
 .page-section {
   padding: 5.625rem 0; }
@@ -897,3 +934,32 @@ span.about-breafly__item--inner__decor {
       margin-left: 30px;
       width: 100%;
       max-width: 100%; } }
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+  .parallax-container .shell {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+.material-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+  .material-parallax img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 101%;
+    min-height: 101%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center; }
