@@ -1,0 +1,29 @@
+.block-info
+	display: flex
+	padding: 3%
+	background-color: #fff
+	box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.09)
+
+@media (min-width: 992px)
+	.block-info
+		width: 94%
+
+.block-info
+	> .block-info-inner
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 45px 30px
+		border: 1px solid #ebebeb
+		*
+			max-width: 100%
+			+ *
+				margin-top: 15px
+	img.img-circle
+		box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.09)
+
+@media (min-width: 1200px)
+	.block-info > .block-info-inner * + *
+		margin-top: 30px
