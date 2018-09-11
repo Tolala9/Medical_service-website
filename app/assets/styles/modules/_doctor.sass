@@ -1,0 +1,85 @@
+.doctor
+	max-width: 268px
+	text-align: center
+	a
+		color: #fff
+		&:focus, &:active
+			color: #fff
+		&:hover
+			color: #97abcf
+
+@media (max-width: 479px)
+	.doctor
+		margin-left: auto
+		margin-right: auto
+
+.doctor__image-block
+	position: relative
+	overflow: hidden
+	z-index: 1
+	img
+		transform: scale(1)
+		transition: .3s ease-out transform
+
+.doctor__content__divider
+	width: 142px
+	height: 1px
+	background-color: #7890b8
+	transition: .3s ease-out background-color
+	margin-left: auto
+	margin-right: auto
+
+* + .doctor__content__divider, .doctor__content__divider + *
+	margin-top: 10px
+
+.doctor__content__tel >
+	span, a
+		display: inline-block
+		vertical-align: middle
+	* + *
+		margin-left: 5px
+
+.doctor__content__tel
+	i 
+		color: $green
+
+.doctor__content
+	padding: 22px 10px 28px
+	background-color: $darkBlue
+	transition: .3s ease-out background-color
+
+@media (min-width: 768px)
+	.doctor__content
+		padding: 22px 10px 40px
+
+.doctor__content__cite
+	color: $greenText
+	transition: .3s ease-out color
+
+* + .doctor__content__cite
+	margin-top: 3px
+
+.doctor__content__cite + *
+	margin-top: 5px
+
+.doctor:hover
+	a
+		color: #fff
+		&:focus, &:active
+			color: #fff
+		&:hover
+			color: #00657C
+	.fas
+		color: #fff
+	.doctor__image-block img
+		transform: scale(1.1)
+	.doctor__content__cite
+		color: #fff
+	.doctor__content__divider
+		background-color: #fff
+	.doctor__content
+		background-color: #00BB6D
+
+.owl-carousel .doctor
+	margin-left: auto
+	margin-right: auto

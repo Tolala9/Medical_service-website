@@ -12,7 +12,7 @@ body
 	margin: 0
 
 
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6, [class*='heading-']
 	margin-top: 0
 	margin-bottom: 0
 	font-family: "Montserrat", sans-serif
@@ -28,7 +28,7 @@ h2
 h3
 	font-size: 24px
 	line-height: 1.2
-h4
+h4, .heading-4
 	font-size: 20px
 	line-height: 1.2
 * + h4
@@ -39,7 +39,7 @@ i + h4
 		margin-top: 8px
 	a:hover
 		color: $greenText
-h5
+h5, .heading-5
 	font-size: 18px
 	line-height: 1.441
 h6
@@ -71,6 +71,9 @@ img
 	display: inline-block
 	max-width: 100%
 	height: auto
+	vertical-align: middle
+.img-circle
+	border-radius: 50%
 
 *
 	-webkit-box-sizing: border-box
