@@ -1,0 +1,37 @@
+.news-mini
+  position: relative
+  padding-left: 20px
+  &:before
+    content: ''
+    position: absolute
+    top: 4px
+    bottom: 8px
+    left: 0
+    width: 3px
+    border-left: 3px solid #00BB6D
+  .news-mini__title
+    font-family: "Roboto", Helvetica, Arial, sans-serif
+    font-size: 14px
+    font-weight: 400
+
+.news-mini__time
+  display: inline-block
+  font-size: 14px
+  letter-spacing: .05em
+
+* + .news-mini__time
+  margin-top: 7px
+
+.context--dark .news-mini
+  .news-mini__title
+    color: $whiteText
+    &:focus, &:active
+      color: $whiteText
+    &:hover
+      color: $greenText
+  .news-mini__time
+    color: $greyText
+    &:focus, &:active
+      color: $greyText
+    &:hover
+      color: $greenText

@@ -66,6 +66,41 @@ hr {
   margin-bottom: 0;
   border-top: 1px solid #90959e; }
 
+h1 a {
+  color: inherit; }
+  h1 a:focus, h1 a:active {
+    color: inherit; }
+
+h2 a {
+  color: inherit; }
+  h2 a:focus, h2 a:active {
+    color: inherit; }
+
+h3 a {
+  color: inherit; }
+  h3 a:focus, h3 a:active {
+    color: inherit; }
+
+h4 a {
+  color: inherit; }
+  h4 a:focus, h4 a:active {
+    color: inherit; }
+
+h5 a {
+  color: inherit; }
+  h5 a:focus, h5 a:active {
+    color: inherit; }
+
+h6 a {
+  color: inherit; }
+  h6 a:focus, h6 a:active {
+    color: inherit; }
+
+[class*='heading-'] a {
+  color: inherit; }
+  [class*='heading-'] a:focus, [class*='heading-'] a:active {
+    color: inherit; }
+
 ul, ol {
   display: block;
   list-style: none;
@@ -2775,7 +2810,7 @@ span.about-breafly__item--inner__decor {
 .news-inf-block {
   max-width: 283px; }
 
-.contact-inf-block h6, .news-inf-block h6, .leave-quest-block h6 {
+.contact-inf-block > h6, .news-inf-block > h6, .leave-quest-block > h6 {
   text-transform: uppercase; }
 
 .contact-inf-block .divider-default, .news-inf-block .divider-default, .leave-quest-block .divider-default {
@@ -2895,3 +2930,41 @@ ul, ol {
   .unit-horizontal > .unit-body + .unit-right {
     padding-top: 0;
     padding-left: 30px; }
+
+.news-mini {
+  position: relative;
+  padding-left: 20px; }
+  .news-mini:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    bottom: 8px;
+    left: 0;
+    width: 3px;
+    border-left: 3px solid #00BB6D; }
+  .news-mini .news-mini__title {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400; }
+
+.news-mini__time {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: .05em; }
+
+* + .news-mini__time {
+  margin-top: 7px; }
+
+.context--dark .news-mini .news-mini__title {
+  color: #fff; }
+  .context--dark .news-mini .news-mini__title:focus, .context--dark .news-mini .news-mini__title:active {
+    color: #fff; }
+  .context--dark .news-mini .news-mini__title:hover {
+    color: #00BB6D; }
+
+.context--dark .news-mini .news-mini__time {
+  color: #9b9b9b; }
+  .context--dark .news-mini .news-mini__time:focus, .context--dark .news-mini .news-mini__time:active {
+    color: #9b9b9b; }
+  .context--dark .news-mini .news-mini__time:hover {
+    color: #00BB6D; }
