@@ -193,6 +193,11 @@ img {
 .text-right {
   text-align: right; }
 
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px; }
+
 .wrapper {
   overflow: hidden;
   padding-left: 15px;
@@ -1738,6 +1743,21 @@ html.lt-ie-10 .range > [class*="cell-xs-preffix-"], html.lt-ie-10 .range > [clas
     .button-normal:hover {
       color: #fff;
       background-color: #001515; }
+  .button-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .button-primary {
+    color: #fff;
+    background-color: #00BB6D; }
+    .button-primary:focus, .button-primary:active {
+      color: #fff;
+      background-color: #00BB6D; }
+    .button-primary:hover {
+      color: #fff;
+      background-color: #2f353e; }
   .button--effect-cool {
     position: relative;
     z-index: 0;
@@ -2968,3 +2988,142 @@ ul, ol {
     color: #9b9b9b; }
   .context--dark .news-mini .news-mini__time:hover {
     color: #00BB6D; }
+
+.form-wrap {
+  position: relative; }
+
+.form-label, .form-input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #9b9b9b; }
+
+.form-label {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #9b9b9b;
+  pointer-events: none;
+  z-index: 9;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  letter-spacing: 0.05em; }
+  .form-label.focus {
+    opacity: 0; }
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #9b9b9b;
+  background-color: #f5f5f5;
+  background-image: none;
+  border: 1px solid #f5f5f5;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  letter-spacing: 0.05em;
+  -webkit-appearance: none; }
+  .form-input:focus {
+    outline: 0; }
+  .form-input:-webkit-autofill ~ label, .form-input:-webkit-autofill ~ .form-validation {
+    color: #000 !important; }
+
+textarea.form-input {
+  height: 135px;
+  min-height: 108px;
+  max-height: 229.5px;
+  resize: vertical; }
+
+.form-validation {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  font-size: 11px;
+  line-height: 11px;
+  color: #d9534f;
+  margin-top: 3px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  z-index: 11; }
+
+.form-validation-left .form-validation {
+  right: auto;
+  top: 100%;
+  left: 0; }
+
+* + .form-button, .form-wrap + .button {
+  margin-top: 30px; }
+
+.rd-mailform-mini * + .form-button {
+  margin-top: 23px; }
+
+.rd-mailform {
+  position: relative;
+  text-align: left; }
+
+.rd-mailform-mini--left + .rd-mailform-mini--right, .rd-mailform-mini * + .form-button {
+  margin-top: 23px; }
+
+* + .rd-mailform {
+  margin-top: 20px; }
+
+* + .rd-mailform-inline {
+  margin-top: 20px; }
+
+@media (min-width: 1200px) {
+  * + .rd-mailform {
+    margin-top: 30px; }
+  h4 + .rd-mailform {
+    margin-top: 40px; }
+  * + .rd-mailform-inline {
+    margin-top: 30px; }
+  h4 + .rd-mailform-inline {
+    margin-top: 40px; } }
+
+@media (min-width: 768px) {
+  .rd-mailform-mini {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .rd-mailform-mini--left, .rd-mailform-mini--right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .rd-mailform-mini--left > *, .rd-mailform-mini--right > * {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%; }
+  .rd-mailform-mini--left {
+    -webkit-flex-basis: 52.63%;
+    -ms-flex-preferred-size: 52.63%;
+    flex-basis: 52.63%;
+    max-width: 52.63%; }
+  .rd-mailform-mini--right {
+    -webkit-flex-basis: 43.5%;
+    -ms-flex-preferred-size: 43.5%;
+    flex-basis: 43.5%;
+    max-width: 43.5%; }
+  .rd-mailform-mini--left + .rd-mailform-mini--right {
+    margin-top: 0; } }

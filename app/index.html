@@ -616,6 +616,26 @@
             <div class="leave-quest-block">
               <h6>have any questions? Contact us now</h6>
               <div class="divider-default"></div>
+              <form class="rd-mailform rd-mailform-mini" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" >
+
+                <div class="rd-mailform-mini--left">
+                  <div class="form-wrap form-wrap-validation">
+                    <label class="form-label" for="forms-message-footer" >Your Message</label>
+                    <textarea class="form-input" name="message" id="forms-message-footer" data-constraints="@Required"></textarea>
+                  </div>
+                </div>
+
+                <div class="rd-mailform-mini--right">
+                  <div class="form-wrap form-wrap-validation">
+                    <label class="form-label" for="forms-email-footer" >E-mail</label>
+                    <input class="form-input" id="forms-email-footer" type="email" name="email" data-constraints="@Email @Required">
+                  </div>
+                  <div class="form-button">
+                    <button class="button  button-block button--effect-cool" type="submit">send message</button>
+                  </div>
+                </div>
+
+              </form>
             </div>
           </div>
         </div>
