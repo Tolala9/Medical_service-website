@@ -9,7 +9,7 @@
 	cursor: pointer
 	vertical-align: middle
 	user-select: none
-	transition: 2.5s all ease-in-out
+	transition: 250ms all ease-in-out
 	font-size: 12px
 	border: none
 	letter-spacing: 0.05em
@@ -41,32 +41,45 @@
 	
 
 	
-	&--effect-cool
-		position: relative
-		z-index: 0
-		transition: background 0.4s, border-color 0.4s, color 0.1s
-		border-radius: 0
-		&::before
-			content: ''
-			position: absolute
-			top: -1px
-			left: -1px
-			width: calc(100% + 2px)
-			height: calc(100% + 2px)
-			background: $greenButton
-			z-index: -1
-			opacity: 0
-			transform: scale3d(0.7, 1, 1)
-			transition: transform 0.4s, opacity 0.4s
-			transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
-	&--effect-cool
-		&:hover
-			background-color: transparent
-			// color: $whiteText
-			&::before
-				opacity: 1
-				transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
-
+	
+.button--effect-cool
+  position: relative
+  z-index: 0
+  transition: background 0.4s, border-color 0.4s, color 0.4s
+  border-radius: 0
+  &::before
+    content: ''
+    position: absolute
+    top: -1px
+    left: -1px
+    width: calc(100% + 2px)
+    height: calc(100% + 2px)
+    background: #00BB6D
+    z-index: -1
+    opacity: 0
+    transform: scale3d(0.7, 1, 1)
+    transition: transform 0.4s, opacity 0.4s
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+  &:before
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+  &:hover
+    background-color: transparent
+    &::before
+      opacity: 1
+      transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+  &.button-ellipse-md:before
+    border-radius: 3px
+  &.button-ellipse-lg:before
+    border-radius: 10px
+  &.button-circle:before
+    border-radius: 30px
+  &.button-social::before, &.button-primary::before
+    background: #2f353e
+  &.button-gray-drago-dark:before
+    background-color: #00BB6D
+  &.button-normal-outline:before
+    background: #151515#2f353e
 
 
 @media only screen and (min-width: 480px)
