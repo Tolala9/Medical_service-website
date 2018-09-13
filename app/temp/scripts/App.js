@@ -90,20 +90,25 @@ var _rdMailForm = __webpack_require__(5);
 
 var _rdMailForm2 = _interopRequireDefault(_rdMailForm);
 
+var _copyrightYear = __webpack_require__(6);
+
+var _copyrightYear2 = _interopRequireDefault(_copyrightYear);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Instantiate a new object using our modules/classes
-var john = new _Person2.default("John Doe", "blue"); // 3rd party packages from NPM
+// 3rd party packages from NPM
 // var $ = require('jquery');
 
 // Our modules / classes
-
+var john = new _Person2.default("John Doe", "blue");
 john.greet();
 
 var owlCarousel = new _owlCarousel2.default();
 var parallax = new _materianizeParallax2.default();
 var slick = new _slickSlider2.default();
 var rdMailForm = new _rdMailForm2.default();
+var copyrightYear = new _copyrightYear2.default();
 // owlCarousel.hello();
 
 
@@ -1004,6 +1009,77 @@ var RDMailForm = function () {
 }();
 
 exports.default = RDMailForm;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CopyrightYear = function () {
+  function CopyrightYear() {
+    _classCallCheck(this, CopyrightYear);
+
+    this.allMethods();
+  }
+
+  _createClass(CopyrightYear, [{
+    key: "allMethods",
+    value: function allMethods() {
+
+      (function () {
+
+        /**
+         * Global variables
+         */
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            initialDate = new Date(),
+            $document = $(document),
+            $window = $(window),
+            $html = $("html"),
+            $body = $('body'),
+            isDesktop = $html.hasClass("desktop"),
+            isRtl = $html.attr("dir") === "rtl",
+            isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+            isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTouch = "ontouchstart" in window,
+            onloadCaptchaCallback,
+            plugins = {
+          copyrightYear: $(".copyright-year")
+        };
+
+        /**
+         * Initialize All Scripts
+         */
+        $document.ready(function () {
+          var isNoviBuilder = window.xMode;
+
+          /**
+          * Copyright Year
+          * @description  Evaluates correct copyright year
+          */
+          if (plugins.copyrightYear.length) {
+            plugins.copyrightYear.text(initialDate.getFullYear());
+          }
+        });
+      })();
+    }
+  }]);
+
+  return CopyrightYear;
+}();
+
+exports.default = CopyrightYear;
 
 /***/ })
 /******/ ]);
