@@ -101,6 +101,10 @@ li
 a
 	text-decoration: none
 	transition: 0.25s ease-out
+
+i
+	transition: 0.25s ease-out
+
 	
 
 p
@@ -178,6 +182,17 @@ img
 
 .text-right
 	text-align: right
+
+@media (min-width: 768px)
+  html:not(.lt-ie10)
+    .text-sm--left
+      text-align: left
+    .text-sm--center
+      text-align: center
+    .text-sm--right
+      text-align: right
+    .text-sm--justify
+      text-align: justify
 
 
 
