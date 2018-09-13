@@ -13,7 +13,7 @@ import CopyrightYear from './modules/copyright-year';
 var john = new Person("John Doe", "blue");
 john.greet();
 
-var owlCarousel = new OwlCarousel();
+var owlCarousel = new OwlCarousel(); 
 var parallax = new Parallax();
 var slick = new SlickSlider();
 var rdMailForm = new RDMailForm();

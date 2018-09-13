@@ -1,0 +1,31 @@
+.snackbars
+	padding: 9px 16px
+	margin-left: auto
+	margin-right: auto
+	color: #fff
+	text-align: left
+	background-color: #151515
+	border-radius: 0
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15)
+	font-size: 14px
+	.icon-xxs
+		font-size: 18px
+	p span:last-child
+		padding-left: 14px
+
+.snackbars-left
+	display: inline-block
+	margin-bottom: 0
+
+.snackbars-right
+	display: inline-block
+	float: right
+	text-transform: uppercase
+	&:hover
+		text-decoration: underline
+
+@media (min-width: 480px)
+	.snackbars
+		max-width: 540px
+		padding: 12px 15px
+		font-size: 15px

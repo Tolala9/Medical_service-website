@@ -4,7 +4,7 @@ class CopyrightYear{
 		this.allMethods();  
 	}
 
-  
+
 
 
   allMethods() {
@@ -46,7 +46,7 @@ class CopyrightYear{
      if (plugins.copyrightYear.length) {
       plugins.copyrightYear.text(initialDate.getFullYear());
     }
-    
+
     
   });
 

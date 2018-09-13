@@ -130,3 +130,42 @@ textarea.form-input
 	//   height: 100%
 	//   min-height: 100%
 	//   max-height: 100%
+
+
+
+
+#form-output-global
+	position: fixed
+	bottom: 0
+	// visibility: hidden
+	transform: translateY(calc(100% + 30px))
+	transition: .3s all ease
+	z-index: 9999999
+	margin: 15px
+	&.active
+		transform: translateY(0)
+		visibility: visible
+	a:hover
+		color: #fff
+
+@media (min-width: 768px)
+	#form-output-global
+		margin: 30px
+
+.form-output
+	position: absolute
+	top: 100%
+	left: 0
+	font-size: 14px
+	line-height: 1.5
+	margin-top: 2px
+	transition: .3s
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+	&.error
+		color: #d9534f
+	&.success
+		color: #5cb85c
