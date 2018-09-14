@@ -8,6 +8,7 @@ import Parallax from './modules/materianize-parallax';
 import SlickSlider from './modules/slick-slider';
 import RDMailForm from './modules/rd-mail-form';
 import CopyrightYear from './modules/copyright-year';
+import UIToTop from './modules/ui-to-top';
 
 // Instantiate a new object using our modules/classes
 var john = new Person("John Doe", "blue");
@@ -18,6 +19,7 @@ var parallax = new Parallax();
 var slick = new SlickSlider();
 var rdMailForm = new RDMailForm();
 var copyrightYear = new CopyrightYear();
+var uitotop = new UIToTop();
 // owlCarousel.hello();
 
 

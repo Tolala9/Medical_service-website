@@ -8,7 +8,8 @@ gulp.task('coreJs', function() {
 		'./app/assets/libs/OwlCarousel/owl.carousel.js',
 		'./app/assets/libs/Parallax/materianizeParallax.js',
 		'./app/assets/libs/SlickSlider/slick-slider.js',
-		'./app/assets/libs/RD-mailForm/rd-mailForm.js'
+		'./app/assets/libs/RD-mailForm/rd-mailForm.js',
+		'./app/assets/libs/UIToTop/ui-to-top.js'
 		])
 	.pipe(concat('core.min.js'))
 	// .pipe(uglify()) // minimize

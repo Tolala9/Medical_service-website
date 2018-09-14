@@ -94,14 +94,18 @@ var _copyrightYear = __webpack_require__(6);
 
 var _copyrightYear2 = _interopRequireDefault(_copyrightYear);
 
+var _uiToTop = __webpack_require__(7);
+
+var _uiToTop2 = _interopRequireDefault(_uiToTop);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Instantiate a new object using our modules/classes
-// 3rd party packages from NPM
+var john = new _Person2.default("John Doe", "blue"); // 3rd party packages from NPM
 // var $ = require('jquery');
 
 // Our modules / classes
-var john = new _Person2.default("John Doe", "blue");
+
 john.greet();
 
 var owlCarousel = new _owlCarousel2.default();
@@ -109,6 +113,7 @@ var parallax = new _materianizeParallax2.default();
 var slick = new _slickSlider2.default();
 var rdMailForm = new _rdMailForm2.default();
 var copyrightYear = new _copyrightYear2.default();
+var uitotop = new _uiToTop2.default();
 // owlCarousel.hello();
 
 
@@ -1080,6 +1085,77 @@ var CopyrightYear = function () {
 }();
 
 exports.default = CopyrightYear;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var UIToTop = function () {
+  function UIToTop() {
+    _classCallCheck(this, UIToTop);
+
+    this.allMethods();
+  }
+
+  _createClass(UIToTop, [{
+    key: "allMethods",
+    value: function allMethods() {
+
+      (function () {
+
+        /**
+         * Global variables
+         */
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            initialDate = new Date(),
+            $document = $(document),
+            $window = $(window),
+            $html = $("html"),
+            $body = $('body'),
+            isDesktop = $html.hasClass("desktop"),
+            isRtl = $html.attr("dir") === "rtl",
+            isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+            isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTouch = "ontouchstart" in window,
+            onloadCaptchaCallback;
+
+        /**
+         * Initialize All Scripts
+         */
+        $document.ready(function () {
+          var isNoviBuilder = window.xMode;
+
+          /**
+           * UI To Top
+           * @description Enables ToTop Button
+           */
+          if (isDesktop && !isNoviBuilder) {
+            $().UItoTop({
+              easingType: 'easeOutQuart',
+              containerClass: 'ui-to-top'
+            });
+          }
+        });
+      })();
+    }
+  }]);
+
+  return UIToTop;
+}();
+
+exports.default = UIToTop;
 
 /***/ })
 /******/ ]);

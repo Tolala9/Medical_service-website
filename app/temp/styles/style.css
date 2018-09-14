@@ -3292,3 +3292,74 @@ textarea.form-input {
     max-width: 540px;
     padding: 12px 15px;
     font-size: 15px; } }
+
+.ui-to-top {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 46px;
+  color: #FFF;
+  background: #00BB6D;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+  -webkit-transition: .45s all ease-in-out;
+  -o-transition: .45s all ease-in-out;
+  transition: .45s all ease-in-out;
+  -webkit-transform: translateY(100px);
+      -ms-transform: translateY(100px);
+          transform: translateY(100px); }
+  .ui-to-top:hover {
+    color: #fff;
+    background: #00884f;
+    text-decoration: none; }
+  .ui-to-top:focus {
+    color: #fff; }
+  .ui-to-top.active {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
+  .ui-to-top i {
+    font-size: 26px;
+    margin-top: 11px; }
+
+html.mobile .ui-to-top, html.tablet .ui-to-top {
+  display: none !important; }
+
+@media (min-width: 480px) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px; } }
+
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  overflow: hidden;
+  width: 51px;
+  height: 51px;
+  border: none;
+  text-indent: 100%;
+  background: url(../img/ui.totop.png) no-repeat left top; }
+
+#toTopHover {
+  background: url(../img/ui.totop.png) no-repeat left -51px;
+  width: 51px;
+  height: 51px;
+  display: block;
+  overflow: hidden;
+  float: left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0); }
+
+#toTop:active, #toTop:focus {
+  outline: none; }
