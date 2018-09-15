@@ -1828,6 +1828,10 @@ html.lt-ie-10 .range > [class*="cell-xs-preffix-"], html.lt-ie-10 .range > [clas
 * + .button {
   margin-top: 30px; }
 
+@media (min-width: 768px) {
+  .section-box__right * + .button {
+    margin-top: 0; } }
+
 .button--effect-cool {
   position: relative;
   z-index: 0;
@@ -3752,6 +3756,10 @@ html.mobile .ui-to-top, html.tablet .ui-to-top {
   transition: .2s ease-in;
   will-change: transform;
   z-index: 10; }
+  .swiper-button-prev i, .swiper-button-next i {
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in; }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
   color: #fff;
@@ -3768,21 +3776,9 @@ html.mobile .ui-to-top, html.tablet .ui-to-top {
 
 .swiper-button-prev {
   left: 0; }
-  .swiper-button-prev:before {
-    font-family: 'fl-budicons-free';
-    content: "\e016"; }
 
 .swiper-button-next {
   right: 0; }
-  .swiper-button-next:before {
-    font-family: 'fl-budicons-free';
-    content: "\e025"; }
-
-.swiper-slider.swiper-container-rtl .swiper-button-prev:before {
-  content: "\f061"; }
-
-.swiper-slider.swiper-container-rtl .swiper-button-next:before {
-  content: "\f060"; }
 
 .swiper-pagination:not(.swiper-pagination-index) {
   position: absolute;
