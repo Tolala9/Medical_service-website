@@ -1,20 +1,16 @@
 .page-header
-	display: flex
-	padding: 40px 15px
-	&__logo
-		flex: 1
-	&__menu-content
-		display: flex
-		flex: 3
-	&__search
-		display: flex
-		margin: auto
-		a
-			color: $greyText
-			font-size: 20px
-			transition: 0.25s ease-out
-			&:hover 
-				color: $greenText
+	padding: 0
+	margin: 0
+	border-bottom: none
+	+
+		.section-breadcrumb.section-breadcrumb
+			margin-top: 0
+		.section, .swiper-main-wrap
+			margin-top: 40px
+		.swiper-modern
+			margin-top: 0
+		.swiper-high-tech
+			margin-top: 20px
 	
 .primary-nav
 	margin: auto 0

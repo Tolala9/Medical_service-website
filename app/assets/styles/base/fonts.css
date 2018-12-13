@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: fontawesome;
     src: url(../../fonts/fontawesome-webfont.eot);
     src: url(../../fonts/fontawesome-webfont.eot) format("embedded-opentype"), url(../../fonts/fontawesome-webfont.woff2) format("woff2"), url(../../fonts/fontawesome-webfont.woff) format("woff"), url(../../fonts/fontawesome-webfont.ttf) format("truetype"), url(../../fonts/fontawesome-webfont.svg) format("svg");
@@ -2874,8 +2874,8 @@
 }
 
 .fa-address-card-o:before,
-.fa-vcard-o:before {
-    content: "\f2bc"
+.fa-vcard-o:before {*/
+    /*content: "\f2bc"
 }
 
 .fa-user-circle:before {
@@ -4832,9 +4832,9 @@
 
 .mdi-desktop-tower:before {
     content: "\f2ba"
-}
+}*/
 
-.mdi-details:before {
+/*.mdi-details:before {
     content: "\f2bb"
 }
 
@@ -6476,9 +6476,9 @@
 
 .mdi-message-draw:before {
     content: "\f455"
-}
+}*/
 
-.mdi-message-image:before {
+/*.mdi-message-image:before {
     content: "\f456"
 }
 
@@ -8280,9 +8280,9 @@
 
 .mdi-traffic-light:before {
     content: "\f618"
-}
+}*/
 
-.mdi-train:before {
+/*.mdi-train:before {
     content: "\f619"
 }
 
@@ -9867,8 +9867,8 @@
 .fl-budicons-free-circle95:before {
     content: "\e005"
 }
-
-.fl-budicons-free-closet:before {
+*/
+/*.fl-budicons-free-closet:before {
     content: "\e006"
 }
 
@@ -10034,10 +10034,10 @@
 
 .fl-budicons-free-wheel29:before {
     content: "\e02f"
-}
+}*/
 
 @font-face {
-    font-family: Material Design Icons;
+    font-family: Material Icons;
     font-style: normal;
     font-weight: 400;
     src: url(../../fonts/MaterialIcons-Regular.eot);
@@ -10046,7 +10046,7 @@
 
 .material-icons-ico,
 [class*=material-icons-]:before {
-    font-family: Material Design Icons;
+    font-family: Material Icons;
     font-weight: 400;
     font-style: normal;
     font-size: inherit
@@ -13232,7 +13232,7 @@
     content: "\e900"
 }
 
-@font-face {
+/*@font-face {
     font-family: fl-flat-icons-set-2;
     src: url(../fonts/fl-flat-icons-set-2.eot);
     src: url(../fonts/fl-flat-icons-set-2.eot#iefix) format("embedded-opentype"), url(../fonts/fl-flat-icons-set-2.woff) format("woff"), url(../fonts/fl-flat-icons-set-2.ttf) format("truetype"), url(../fonts/fl-flat-icons-set-2.svg) format("svg");
@@ -13361,4 +13361,4 @@
 
 .fl-flat-icons-set-2-visibility:before {
     content: "\e01b"
-}
+}*/
