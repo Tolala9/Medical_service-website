@@ -82,30 +82,34 @@ var _materianizeParallax = __webpack_require__(3);
 
 var _materianizeParallax2 = _interopRequireDefault(_materianizeParallax);
 
-var _rdMailForm = __webpack_require__(4);
+var _slickSlider = __webpack_require__(4);
+
+var _slickSlider2 = _interopRequireDefault(_slickSlider);
+
+var _rdMailForm = __webpack_require__(5);
 
 var _rdMailForm2 = _interopRequireDefault(_rdMailForm);
 
-var _copyrightYear = __webpack_require__(5);
+var _copyrightYear = __webpack_require__(6);
 
 var _copyrightYear2 = _interopRequireDefault(_copyrightYear);
 
-var _uiToTop = __webpack_require__(6);
+var _uiToTop = __webpack_require__(7);
 
 var _uiToTop2 = _interopRequireDefault(_uiToTop);
 
-var _select = __webpack_require__(7);
+var _select = __webpack_require__(8);
 
 var _select2 = _interopRequireDefault(_select);
+
+var _swiper = __webpack_require__(9);
+
+var _swiper2 = _interopRequireDefault(_swiper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Instantiate a new object using our modules/classes
-
-// import SlickSlider 		from './modules/slick-slider';
-var john = new _Person2.default("John Doe", "blue");
-// import Swiper 				from './modules/swiper';
-// 3rd party packages from NPM
+var john = new _Person2.default("John Doe", "blue"); // 3rd party packages from NPM
 // var $ = require('jquery');
 
 // Our modules / classes
@@ -114,12 +118,12 @@ john.greet();
 
 var owlCarousel = new _owlCarousel2.default();
 var parallax = new _materianizeParallax2.default();
-// var slick 				= new SlickSlider();
+var slick = new _slickSlider2.default();
 var rdMailForm = new _rdMailForm2.default();
 var copyrightYear = new _copyrightYear2.default();
 var uitotop = new _uiToTop2.default();
-// var swiper 				= new Swiper();
 var select2 = new _select2.default();
+var swiper = new _swiper2.default();
 
 // owlCarousel.hello();
 // $("h1").remove();//test jquery
@@ -461,6 +465,131 @@ exports.default = Parallax;
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SlickSlider = function () {
+  function SlickSlider() {
+    _classCallCheck(this, SlickSlider);
+
+    this.allMethods();
+  }
+
+  _createClass(SlickSlider, [{
+    key: "allMethods",
+    value: function allMethods() {
+
+      (function () {
+
+        /**
+         * Global variables
+         */
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            initialDate = new Date(),
+            $document = $(document),
+            $window = $(window),
+            $html = $("html"),
+            $body = $('body'),
+            isDesktop = $html.hasClass("desktop"),
+            isRtl = $html.attr("dir") === "rtl",
+            isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+            isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTouch = "ontouchstart" in window,
+            onloadCaptchaCallback,
+            plugins = {
+          slick: $('.slick-slider')
+        };
+
+        /**
+         * Initialize All Scripts
+         */
+        $document.ready(function () {
+          var isNoviBuilder = window.xMode;
+
+          /**
+           * Slick carousel
+           * @description  Enable Slick carousel plugin
+           */
+          if (plugins.slick.length) {
+            var i;
+            for (i = 0; i < plugins.slick.length; i++) {
+              var $slickItem = $(plugins.slick[i]);
+
+              $slickItem.slick({
+                slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll'), 10) || 1,
+                asNavFor: $slickItem.attr('data-for') || false,
+                speed: $slickItem.attr("data-speed") ? $slickItem.attr("data-speed") : 600,
+                dots: $slickItem.attr("data-dots") === "true",
+                infinite: isNoviBuilder ? false : $slickItem.attr("data-loop") === "true",
+                focusOnSelect: true,
+                arrows: $slickItem.attr("data-arrows") === "true",
+                swipe: $slickItem.attr("data-swipe") === "true",
+                autoplay: $slickItem.attr("data-autoplay") === "true",
+                vertical: $slickItem.attr("data-vertical") === "true",
+                centerMode: $slickItem.attr("data-center-mode") === "true",
+                centerPadding: $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
+                mobileFirst: true,
+                rtl: isRtl,
+                responsive: [{
+                  breakpoint: 0,
+                  settings: {
+                    slidesToShow: parseInt($slickItem.attr('data-items'), 10) || 1
+                  }
+                }, {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: parseInt($slickItem.attr('data-xs-items'), 10) || 1
+                  }
+                }, {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: parseInt($slickItem.attr('data-sm-items'), 10) || 1
+                  }
+                }, {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: parseInt($slickItem.attr('data-md-items'), 10) || 1
+                  }
+                }, {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: parseInt($slickItem.attr('data-lg-items'), 10) || 1
+                  }
+                }]
+              }).on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                var $this = $(this),
+                    childCarousel = $this.attr('data-child');
+
+                if (childCarousel) {
+                  $(childCarousel + ' .slick-slide').removeClass('slick-current');
+                  $(childCarousel + ' .slick-slide').eq(currentSlide).addClass('slick-current');
+                }
+              });
+            }
+          }
+        });
+      })();
+    }
+  }]);
+
+  return SlickSlider;
+}();
+
+exports.default = SlickSlider;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -896,7 +1025,7 @@ var RDMailForm = function () {
 exports.default = RDMailForm;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -967,7 +1096,7 @@ var CopyrightYear = function () {
 exports.default = CopyrightYear;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1038,7 +1167,7 @@ var UIToTop = function () {
 exports.default = UIToTop;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1106,6 +1235,235 @@ var Select2 = function () {
 }();
 
 exports.default = Select2;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Swiper = function () {
+  function Swiper() {
+    _classCallCheck(this, Swiper);
+
+    this.allMethods();
+  }
+
+  _createClass(Swiper, [{
+    key: "allMethods",
+    value: function allMethods() {
+
+      (function () {
+
+        /**
+         * Global variables
+         */
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            initialDate = new Date(),
+            $document = $(document),
+            $window = $(window),
+            $html = $("html"),
+            $body = $('body'),
+            isDesktop = $html.hasClass("desktop"),
+            isRtl = $html.attr("dir") === "rtl",
+            isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+            isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTouch = "ontouchstart" in window,
+            onloadCaptchaCallback,
+            plugins = {
+          swiper: $(".swiper-slider"),
+          rdMailForm: $(".rd-mailform")
+        };
+
+        /**
+         * Initialize All Scripts
+         */
+        $document.ready(function () {
+          var isNoviBuilder = window.xMode;
+
+          /**
+           * getSwiperHeight
+           * @description  calculate the height of swiper slider basing on data attr
+           */
+          function getSwiperHeight(object, attr) {
+            var val = object.attr("data-" + attr),
+                dim;
+
+            if (!val) {
+              return undefined;
+            }
+
+            dim = val.match(/(px)|(%)|(vh)$/i);
+
+            if (dim.length) {
+              switch (dim[0]) {
+                case "px":
+                  return parseFloat(val);
+                case "vh":
+                  return $window.height() * (parseFloat(val) / 100);
+                case "%":
+                  return object.width() * (parseFloat(val) / 100);
+              }
+            } else {
+              return undefined;
+            }
+          }
+
+          /**
+           * toggleSwiperInnerVideos
+           * @description  toggle swiper videos on active slides
+           */
+          function toggleSwiperInnerVideos(swiper) {
+            var prevSlide = $(swiper.slides[swiper.previousIndex]),
+                nextSlide = $(swiper.slides[swiper.activeIndex]),
+                videos,
+                videoItems = prevSlide.find("video");
+
+            for (i = 0; i < videoItems.length; i++) {
+              videoItems[i].pause();
+            }
+
+            videos = nextSlide.find("video");
+            if (videos.length) {
+              videos.get(0).play();
+            }
+          }
+
+          // *
+          //  * toggleSwiperCaptionAnimation
+          //  * @description  toggle swiper animations on active slides
+
+          function toggleSwiperCaptionAnimation(swiper) {
+            var prevSlide = $(swiper.container).find("[data-caption-animate]"),
+                nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
+                delay,
+                duration,
+                nextSlideItem,
+                prevSlideItem;
+
+            for (i = 0; i < prevSlide.length; i++) {
+              prevSlideItem = $(prevSlide[i]);
+
+              prevSlideItem.removeClass("animated").removeClass(prevSlideItem.attr("data-caption-animate")).addClass("not-animated");
+            }
+
+            for (i = 0; i < nextSlide.length; i++) {
+              nextSlideItem = $(nextSlide[i]);
+              delay = nextSlideItem.attr("data-caption-delay");
+              duration = nextSlideItem.attr('data-caption-duration');
+
+              var tempFunction = function tempFunction(nextSlideItem, duration) {
+                return function () {
+                  nextSlideItem.removeClass("not-animated").addClass(nextSlideItem.attr("data-caption-animate")).addClass("animated");
+
+                  if (duration) {
+                    nextSlideItem.css('animation-duration', duration + 'ms');
+                  }
+                };
+              };
+
+              setTimeout(tempFunction(nextSlideItem, duration), delay ? parseInt(delay, 10) : 0);
+            }
+          }
+
+          /**
+           * Swiper 3.1.7
+           * @description  Enable Swiper Slider
+           */
+          if (plugins.swiper.length) {
+            var i;
+            for (i = 0; i < plugins.swiper.length; i++) {
+              var s = $(plugins.swiper[i]);
+              var pag = s.find(".swiper-pagination").length > 0 ? s.find(".swiper-pagination") : $(s.attr('data-custom-pagination')),
+                  next = s.find(".swiper-button-next"),
+                  prev = s.find(".swiper-button-prev"),
+                  bar = s.find(".swiper-scrollbar"),
+                  swiperSlide = s.find(".swiper-slide"),
+                  autoplay = true;
+
+              for (j = 0; j < swiperSlide.length; j++) {
+                var $this = $(swiperSlide[j]),
+                    url;
+
+                if (url = $this.attr("data-slide-bg")) {
+                  $this.css({
+                    "background-image": "url(" + url + ")",
+                    "background-size": "cover"
+                  });
+                }
+              }
+
+              swiperSlide.end().find("[data-caption-animate]").addClass("not-animated").end().swiper({
+                autoplay: isNoviBuilder ? null : s.attr('data-autoplay') ? s.attr('data-autoplay') === "false" ? undefined : s.attr('data-autoplay') : 5000,
+                direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
+                effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
+                speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
+                keyboardControl: s.attr('data-keyboard') === "true",
+                mousewheelControl: s.attr('data-mousewheel') === "true",
+                mousewheelReleaseOnEdges: s.attr('data-mousewheel-release') === "true",
+                nextButton: next.length ? next.get(0) : null,
+                prevButton: prev.length ? prev.get(0) : null,
+                pagination: pag.length ? pag.get(0) : null,
+                paginationClickable: pag.length ? s.attr("data-clickable") !== "false" : true,
+                paginationBulletRender: pag.length ? s.attr("data-index-bullet") === "true" ? function (swiper, index, className) {
+                  return '<span class="' + className + '">' + (index + 1) + '</span>';
+                } : null : null,
+                scrollbar: bar.length ? bar.get(0) : null,
+                scrollbarDraggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
+                scrollbarHide: bar.length ? bar.attr("data-draggable") === "false" : false,
+                loop: isNoviBuilder ? false : s.attr('data-loop') !== "false",
+                simulateTouch: s.attr('data-simulate-touch') && !isNoviBuilder ? s.attr('data-simulate-touch') === "true" : false,
+                onTransitionStart: function onTransitionStart(swiper) {
+                  toggleSwiperInnerVideos(swiper);
+                },
+                onTransitionEnd: function onTransitionEnd(swiper) {
+                  toggleSwiperCaptionAnimation(swiper);
+                },
+                onInit: function onInit(swiper) {
+                  toggleSwiperInnerVideos(swiper);
+                  toggleSwiperCaptionAnimation(swiper);
+
+                  $window.on('resize', function () {
+                    swiper.update(true);
+                  });
+                }
+              });
+
+              $window.on("resize", function () {
+                var mh = getSwiperHeight(s, "min-height"),
+                    h = getSwiperHeight(s, "height");
+                if (h) {
+                  s.css("height", mh ? mh > h ? mh : h : h);
+                }
+              }).trigger("resize");
+            }
+          };
+
+          if (plugins.rdMailForm.length) {
+            var i,
+                j,
+                k,
+                msg = {};
+          };
+        });
+      })();
+    }
+  }]);
+
+  return Swiper;
+}();
+
+exports.default = Swiper;
 
 /***/ })
 /******/ ]);

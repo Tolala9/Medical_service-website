@@ -35,7 +35,8 @@ class Swiper{
    isTouch = "ontouchstart" in window,
    onloadCaptchaCallback,
    plugins = {
-    swiper: $(".swiper-slider")
+    swiper: $(".swiper-slider"),
+    rdMailForm: $(".rd-mailform")
   };
 
   /**
