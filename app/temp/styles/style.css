@@ -4284,8 +4284,8 @@ html.mobile .ui-to-top, html.tablet .ui-to-top {
   .select2-arrow b:before {
     display: inline-block;
     font-weight: 400;
-    content: "";
-    font-family: 'Material Design Icons';
+    content: "\e313";
+    font-family: 'Material Icons';
     font-size: 22px;
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
