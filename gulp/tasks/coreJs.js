@@ -12,7 +12,8 @@ gulp.task('coreJs', function() {
 		'./app/assets/libs/UIToTop/ui-to-top.js',
 		'./app/assets/libs/Swiper_3.4.2/Swiper.js',
 		'./app/assets/libs/Select-2/select_2.js',
-		'./app/assets/libs/RD-Navbar/rd-navbar.js'
+		'./app/assets/libs/RD-Navbar/rd-navbar.js',
+		'./app/assets/libs/WOW/wow.js'
 		])
 	.pipe(concat('core.min.js'))
 	// .pipe(uglify()) // minimize

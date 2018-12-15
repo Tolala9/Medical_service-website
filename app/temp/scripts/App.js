@@ -110,14 +110,18 @@ var _rdNavbar = __webpack_require__(10);
 
 var _rdNavbar2 = _interopRequireDefault(_rdNavbar);
 
+var _wow = __webpack_require__(11);
+
+var _wow2 = _interopRequireDefault(_wow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Instantiate a new object using our modules/classes
-// 3rd party packages from NPM
+var john = new _Person2.default("John Doe", "blue"); // 3rd party packages from NPM
 // var $ = require('jquery');
 
 // Our modules / classes
-var john = new _Person2.default("John Doe", "blue");
+
 john.greet();
 
 var owlCarousel = new _owlCarousel2.default();
@@ -129,6 +133,7 @@ var uitotop = new _uiToTop2.default();
 var select2 = new _select2.default();
 var swiper = new _swiper2.default();
 var rdNavbar = new _rdNavbar2.default();
+var wow = new _wow2.default();
 
 // owlCarousel.hello();
 // $("h1").remove();//test jquery
@@ -1645,6 +1650,76 @@ var RDNavbar = function () {
 }();
 
 exports.default = RDNavbar;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Wow = function () {
+  function Wow() {
+    _classCallCheck(this, Wow);
+
+    this.allMethods();
+  }
+
+  _createClass(Wow, [{
+    key: "allMethods",
+    value: function allMethods() {
+
+      (function () {
+
+        /**
+         * Global variables
+         */
+
+        var userAgent = navigator.userAgent.toLowerCase(),
+            initialDate = new Date(),
+            $document = $(document),
+            $window = $(window),
+            $html = $("html"),
+            $body = $('body'),
+            isDesktop = $html.hasClass("desktop"),
+            isRtl = $html.attr("dir") === "rtl",
+            isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+            isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTouch = "ontouchstart" in window,
+            onloadCaptchaCallback;
+
+        /**
+         * Initialize All Scripts
+         */
+        $document.ready(function () {
+          var isNoviBuilder = window.xMode;
+
+          if (isDesktop && $html.hasClass("wow-animation") && $(".wow").length) {
+            new WOW({
+              boxClass: 'wow',
+              animateClass: 'animated',
+              offset: 0,
+              mobile: false,
+              live: true
+            }).init();
+          }
+        });
+      })();
+    }
+  }]);
+
+  return Wow;
+}();
+
+exports.default = Wow;
 
 /***/ })
 /******/ ]);
