@@ -1355,28 +1355,22 @@ var Swiper = function () {
                 duration,
                 nextSlideItem,
                 prevSlideItem;
-
             for (i = 0; i < prevSlide.length; i++) {
               prevSlideItem = $(prevSlide[i]);
-
               prevSlideItem.removeClass("animated").removeClass(prevSlideItem.attr("data-caption-animate")).addClass("not-animated");
             }
-
             for (i = 0; i < nextSlide.length; i++) {
               nextSlideItem = $(nextSlide[i]);
               delay = nextSlideItem.attr("data-caption-delay");
               duration = nextSlideItem.attr('data-caption-duration');
-
               var tempFunction = function tempFunction(nextSlideItem, duration) {
                 return function () {
                   nextSlideItem.removeClass("not-animated").addClass(nextSlideItem.attr("data-caption-animate")).addClass("animated");
-
                   if (duration) {
                     nextSlideItem.css('animation-duration', duration + 'ms');
                   }
                 };
               };
-
               setTimeout(tempFunction(nextSlideItem, duration), delay ? parseInt(delay, 10) : 0);
             }
           }

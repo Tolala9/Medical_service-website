@@ -98,42 +98,28 @@ class Swiper{
     //  * @description  toggle swiper animations on active slides
      
      function toggleSwiperCaptionAnimation(swiper) {
-      var prevSlide = $(swiper.container).find("[data-caption-animate]"),
-      nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
-      delay,
-      duration,
-      nextSlideItem,
-      prevSlideItem;
-
-      for (i = 0; i < prevSlide.length; i++) {
-        prevSlideItem = $(prevSlide[i]);
-
-        prevSlideItem.removeClass("animated")
-        .removeClass(prevSlideItem.attr("data-caption-animate"))
-        .addClass("not-animated");
-      }
-
-      for (i = 0; i < nextSlide.length; i++) {
-        nextSlideItem = $(nextSlide[i]);
-        delay = nextSlideItem.attr("data-caption-delay");
-        duration = nextSlideItem.attr('data-caption-duration');
-
-        var tempFunction = function (nextSlideItem, duration) {
-          return function () {
-            nextSlideItem
-            .removeClass("not-animated")
-            .addClass(nextSlideItem.attr("data-caption-animate"))
-            .addClass("animated");
-
-            if (duration) {
-              nextSlideItem.css('animation-duration', duration + 'ms');
+            var prevSlide = $(swiper.container).find("[data-caption-animate]"),
+                nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
+                delay, duration, nextSlideItem, prevSlideItem;
+            for (i = 0; i < prevSlide.length; i++) {
+                prevSlideItem = $(prevSlide[i]);
+                prevSlideItem.removeClass("animated").removeClass(prevSlideItem.attr("data-caption-animate")).addClass("not-animated");
             }
-          };
-        };
-
-        setTimeout(tempFunction(nextSlideItem, duration), delay ? parseInt(delay, 10) : 0);
-      }
-    }
+            for (i = 0; i < nextSlide.length; i++) {
+                nextSlideItem = $(nextSlide[i]);
+                delay = nextSlideItem.attr("data-caption-delay");
+                duration = nextSlideItem.attr('data-caption-duration');
+                var tempFunction = function(nextSlideItem, duration) {
+                    return function() {
+                        nextSlideItem.removeClass("not-animated").addClass(nextSlideItem.attr("data-caption-animate")).addClass("animated");
+                        if (duration) {
+                            nextSlideItem.css('animation-duration', duration + 'ms');
+                        }
+                    };
+                };
+                setTimeout(tempFunction(nextSlideItem, duration), delay ? parseInt(delay, 10) : 0);
+            }
+        }
 
     
     /**
