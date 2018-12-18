@@ -12,7 +12,8 @@ import UIToTop 				from './modules/ui-to-top';
 import Select2 				from './modules/select-2';
 import Swiper 				from './modules/swiper';
 import RDNavbar 			from './modules/rd-navbar';
-import Wow 			from './modules/wow';
+import Wow 						from './modules/wow';
+
 
 // Instantiate a new object using our modules/classes
 var john = new Person("John Doe", "blue");
@@ -25,9 +26,11 @@ var rdMailForm 		= new RDMailForm();
 var copyrightYear = new CopyrightYear();
 var uitotop 			= new UIToTop();
 var select2 			= new Select2();
-var swiper 				= new Swiper();
+var swiper 				= new Swiper(); 
 var rdNavbar 			= new RDNavbar();
 var wow 					= new Wow();
+
+
 
 
 

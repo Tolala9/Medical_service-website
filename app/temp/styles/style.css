@@ -53,6 +53,11 @@ i + h4 {
   i + h4 a:hover {
     color: #00BB6D; }
 
+a {
+  color: #00bb6d; }
+  a:focus, a:active {
+    color: #00bb6d; }
+
 h5, .heading-5 {
   font-size: 18px;
   line-height: 1.441; }
@@ -263,6 +268,26 @@ label {
     max-width: 540px;
     padding: 12px 15px;
     font-size: 15px; } }
+
+.aside-info-item h1, .context-dark h1, .aside-info-item h2, .context-dark h2, .aside-info-item h3, .context-dark h3, .aside-info-item h4, .context-dark h4, .aside-info-item h5, .context-dark h5, .aside-info-item h6, .context-dark h6, .aside-info-item [class*=heading-], .context-dark [class*=heading-], .aside-info-item, .context-dark, .aside-info-item .link-footer, .context-dark .link-footer, .aside-info-item .link-footer:focus, .context-dark .link-footer:focus, .aside-info-item .link-footer:active, .context-dark .link-footer:active {
+  color: #fff; }
+
+.aside-info-item .link-footer:hover, .context-dark .link-footer:hover {
+  color: #00bb6d; }
+
+.context-dark .news-mini .news-mini-title {
+  color: #fff; }
+  .context-dark .news-mini .news-mini-title:focus, .context-dark .news-mini .news-mini-title:active {
+    color: #fff; }
+  .context-dark .news-mini .news-mini-title:hover {
+    color: #00bb6d; }
+
+.context-dark .news-mini .news-mini-time {
+  color: #6a7688; }
+  .context-dark .news-mini .news-mini-time:focus, .context-dark .news-mini .news-mini-time:active {
+    color: #6a7688; }
+  .context-dark .news-mini .news-mini-time:hover {
+    color: #00bb6d; }
 
 .wrapper {
   overflow: hidden;
@@ -6589,3 +6614,26 @@ html:not(.lt-ie10) .not-animated {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); } }
+
+.breadcrumb-wrapper {
+  text-align: center; }
+  .breadcrumb-wrapper .parallax-content {
+    position: relative; }
+
+.page-header + .section-breadcrumb.section-breadcrumb {
+  margin-top: 0; }
+
+.breadcrumb-custom {
+  padding: 15px 5px;
+  letter-spacing: .02em;
+  color: #151515;
+  border-bottom: 1px solid #ebebeb; }
+  .breadcrumb-custom > li {
+    display: inline-block; }
+    .breadcrumb-custom > li:not(:last-child):after {
+      padding: 0 16px;
+      content: "\f105";
+      font-family: fontawesome, sans-serif;
+      font-size: 16px;
+      color: #a9adb4;
+      letter-spacing: 0.02em; }

@@ -1,0 +1,22 @@
+.breadcrumb-wrapper
+  text-align: center
+  .parallax-content
+    position: relative
+
+.page-header + .section-breadcrumb.section-breadcrumb
+  margin-top: 0
+
+.breadcrumb-custom
+  padding: 15px 5px
+  letter-spacing: .02em
+  color: #151515
+  border-bottom: 1px solid #ebebeb
+  > li
+    display: inline-block
+    &:not(:last-child):after
+      padding: 0 16px
+      content: "\f105"
+      font-family: fontawesome, sans-serif
+      font-size: 16px
+      color: #a9adb4
+      letter-spacing: 0.02em
