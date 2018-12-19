@@ -15,7 +15,8 @@ gulp.task('coreJs', function() {
 		'./app/assets/libs/RD-Navbar/rd-navbar.js',
 		'./app/assets/libs/WOW/wow.js',
 		'./app/assets/libs/CountTo/count-to.js',
-		'./app/assets/libs/Circle-progress/Circle-progress.js'
+		'./app/assets/libs/Circle-progress/circle-progress.js',
+		'./app/assets/libs/TimeCircles/time-circles.js'
 		])
 	.pipe(concat('core.min.js'))
 	// .pipe(uglify()) // minimize

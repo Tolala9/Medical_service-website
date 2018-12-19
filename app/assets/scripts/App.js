@@ -16,6 +16,7 @@ import Wow 									from './modules/wow';
 import Counter 							from './modules/counter';
 import ProgressLinear 			from './modules/progress-linear';
 import ProgressBarCircle 		from './modules/progress-bar-circle';
+import DateCountdown		 		from './modules/date-countdown';
 
 
 // Instantiate a new object using our modules/classes
@@ -34,6 +35,7 @@ var rdNavbar 						= new RDNavbar();
 var counterAnimate 			= new Counter();
 var progressLinear 			= new ProgressLinear();
 var progressBarCircle 	= new ProgressBarCircle();
+var dateCountdown 			= new DateCountdown();
 
 
 
