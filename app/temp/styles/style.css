@@ -6782,3 +6782,81 @@ html:not(.lt-ie10) .not-animated {
 
 .lg-skin-light.lg-outer #lg-counter, .lg-skin-light.lg-outer .lg-toolbar .lg-icon, .lg-skin-light.lg-outer.lg-dropdown-active #lg-share {
   color: #353535; }
+
+.progress-linear {
+  position: relative;
+  text-align: left; }
+  .progress-linear .progress-header {
+    text-transform: uppercase; }
+  .progress-linear .progress-main {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center; }
+    .progress-linear .progress-main > * + * {
+      margin-left: 10px; }
+  .progress-linear .progress-bar-linear-wrap {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    background: #f5f5f5;
+    height: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px; }
+    .progress-linear .progress-bar-linear-wrap .progress-bar-linear {
+      -webkit-border-radius: 5px;
+              border-radius: 5px; }
+  .progress-linear .progress-bar-linear {
+    height: 10px;
+    width: 0;
+    margin-right: 25px;
+    background: #00bb6d;
+    -webkit-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out; }
+  .progress-linear .progress-value {
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #9b9b9b; }
+    .progress-linear .progress-value:after {
+      content: "%"; }
+
+* + .progress-main {
+  margin-top: 9px; }
+
+.progress-linear + .progress-linear {
+  margin-top: 20px; }
+
+.progress-bar-circle {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2; }
+  .progress-bar-circle canvas {
+    vertical-align: middle; }
+  .progress-bar-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    font-family: montserrat, sans-serif;
+    letter-spacing: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #151515; }
+    .progress-bar-circle span:after {
+      content: "%"; }
+
+@media (min-width: 1200px) {
+  .progress-bar-circle + p {
+    margin-top: 20px; } }

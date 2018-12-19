@@ -118,6 +118,14 @@ var _counter = __webpack_require__(12);
 
 var _counter2 = _interopRequireDefault(_counter);
 
+var _progressLinear = __webpack_require__(13);
+
+var _progressLinear2 = _interopRequireDefault(_progressLinear);
+
+var _progressBarCircle = __webpack_require__(14);
+
+var _progressBarCircle2 = _interopRequireDefault(_progressBarCircle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Instantiate a new object using our modules/classes
@@ -138,6 +146,8 @@ var select2 = new _select2.default();
 var swiper = new _swiper2.default();
 var rdNavbar = new _rdNavbar2.default();
 var counterAnimate = new _counter2.default();
+var progressLinear = new _progressLinear2.default();
+var progressBarCircle = new _progressBarCircle2.default();
 
 // owlCarousel.hello();
 // $("h1").remove();//test jquery
@@ -1814,6 +1824,199 @@ var Counter = function () {
 }();
 
 exports.default = Counter;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ProgressLinear = function () {
+    function ProgressLinear() {
+        _classCallCheck(this, ProgressLinear);
+
+        this.allMethods();
+    }
+
+    _createClass(ProgressLinear, [{
+        key: "allMethods",
+        value: function allMethods() {
+
+            (function () {
+
+                /**
+                 * Global variables
+                 */
+
+                var userAgent = navigator.userAgent.toLowerCase(),
+                    initialDate = new Date(),
+                    $document = $(document),
+                    $window = $(window),
+                    $html = $("html"),
+                    $body = $('body'),
+                    isDesktop = $html.hasClass("desktop"),
+                    isRtl = $html.attr("dir") === "rtl",
+                    isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+                    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+                    isTouch = "ontouchstart" in window,
+                    onloadCaptchaCallback,
+                    plugins = {
+                    progressLinear: $(".progress-linear")
+                };
+
+                /**
+                 * Initialize All Scripts
+                 */
+                $document.ready(function () {
+                    var isNoviBuilder = window.xMode;
+
+                    /////////////////////////////  
+                    function isScrolledIntoView(elem) {
+                        if (!isNoviBuilder) {
+                            return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
+                        } else {
+                            return true;
+                        }
+                    }
+
+                    /////////////////////////////       
+                    if (plugins.progressLinear.length) {
+                        for (var i = 0; i < plugins.progressLinear.length; i++) {
+                            var progressBar = $(plugins.progressLinear[i]);
+                            $window.on("scroll load", $.proxy(function () {
+                                var bar = $(this);
+                                if (!bar.hasClass('animated-first') && isScrolledIntoView(bar)) {
+                                    var end = parseInt($(this).find('.progress-value').text(), 10);
+                                    bar.find('.progress-bar-linear').css({
+                                        width: end + '%'
+                                    });
+                                    bar.find('.progress-value').countTo({
+                                        refreshInterval: 40,
+                                        from: 0,
+                                        to: end,
+                                        speed: 500
+                                    });
+                                    bar.addClass('animated-first');
+                                }
+                            }, progressBar));
+                        }
+                    }
+                });
+            })();
+        }
+    }]);
+
+    return ProgressLinear;
+}();
+
+exports.default = ProgressLinear;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ProgressBarCircle = function () {
+    function ProgressBarCircle() {
+        _classCallCheck(this, ProgressBarCircle);
+
+        this.allMethods();
+    }
+
+    _createClass(ProgressBarCircle, [{
+        key: "allMethods",
+        value: function allMethods() {
+
+            (function () {
+
+                /**
+                 * Global variables
+                 */
+
+                var userAgent = navigator.userAgent.toLowerCase(),
+                    initialDate = new Date(),
+                    $document = $(document),
+                    $window = $(window),
+                    $html = $("html"),
+                    $body = $('body'),
+                    isDesktop = $html.hasClass("desktop"),
+                    isRtl = $html.attr("dir") === "rtl",
+                    isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+                    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+                    isTouch = "ontouchstart" in window,
+                    onloadCaptchaCallback,
+                    plugins = {
+                    circleProgress: $(".progress-bar-circle")
+                };
+
+                /**
+                 * Initialize All Scripts
+                 */
+                $document.ready(function () {
+                    var isNoviBuilder = window.xMode;
+
+                    function isScrolledIntoView(elem) {
+                        if (!isNoviBuilder) {
+                            return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
+                        } else {
+                            return true;
+                        }
+                    }
+
+                    if (plugins.circleProgress.length) {
+                        var i;
+                        for (var i = 0; i < plugins.circleProgress.length; i++) {
+                            var circleProgressItem = $(plugins.circleProgress[i]);
+                            $document.on("scroll", $.proxy(function () {
+                                var $this = $(this);
+                                if (!$this.hasClass('animated') && isScrolledIntoView($this)) {
+                                    var arrayGradients = $this.attr('data-gradient').split(",");
+                                    $this.circleProgress({
+                                        value: parseFloat($this.text()),
+                                        size: $this.attr('data-size') ? $this.attr('data-size') : 175,
+                                        fill: {
+                                            gradient: arrayGradients,
+                                            gradientAngle: Math.PI / 4
+                                        },
+                                        startAngle: -Math.PI / 4 * 2,
+                                        emptyFill: $this.attr('data-empty-fill') ? $this.attr('data-empty-fill') : "rgb(245,245,245)",
+                                        thickness: $this.attr('data-thickness') ? parseInt($this.attr('data-thickness')) : 10
+                                    }).on('circle-animation-progress', function (event, progress, stepValue) {
+                                        $(this).find('span').text(String(stepValue.toFixed(2)).replace('0.', '').replace('1.', '1'));
+                                    });
+                                    $this.addClass('animated');
+                                }
+                            }, circleProgressItem)).trigger("scroll");
+                        }
+                    }
+                });
+            })();
+        }
+    }]);
+
+    return ProgressBarCircle;
+}();
+
+exports.default = ProgressBarCircle;
 
 /***/ })
 /******/ ]);

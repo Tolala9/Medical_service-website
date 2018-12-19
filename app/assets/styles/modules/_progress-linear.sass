@@ -1,0 +1,43 @@
+.progress-linear
+	position: relative
+	text-align: left
+	.progress-header
+		text-transform: uppercase
+	.progress-main
+		display: -ms-flexbox
+		display: -webkit-flex
+		display: flex
+		-webkit-align-items: center
+		-ms-flex-align: center
+		align-items: center
+		> * + *
+			margin-left: 10px
+	.progress-bar-linear-wrap
+		.progress-bar-linear
+			border-radius: 5px
+		-webkit-flex-grow: 1
+		-ms-flex-positive: 1
+		flex-grow: 1
+		background: #f5f5f5
+		height: 10px
+		border-radius: 10px
+	.progress-bar-linear
+		height: 10px
+		width: 0
+		margin-right: 25px
+		background: #00bb6d
+		transition: 0.5s all ease-in-out
+	.progress-value
+		-ms-flex-negative: 0
+		-webkit-flex-shrink: 0
+		flex-shrink: 0
+		font-size: 14px
+		color: #9b9b9b
+		&:after
+			content: "%"
+
+* + .progress-main
+	margin-top: 9px
+
+.progress-linear + .progress-linear
+	margin-top: 20px

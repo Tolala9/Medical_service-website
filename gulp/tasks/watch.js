@@ -11,7 +11,7 @@ gulp.task('watch', ['coreJs'], function() {
       notify: false
   });
 
-  watch('./app/index.html', function() {
+  watch('./app/**.html', function() {
     browserSync.reload();
   });
 

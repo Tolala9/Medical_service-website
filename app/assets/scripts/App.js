@@ -14,6 +14,8 @@ import Swiper 							from './modules/swiper';
 import RDNavbar 						from './modules/rd-navbar';
 import Wow 									from './modules/wow';
 import Counter 							from './modules/counter';
+import ProgressLinear 			from './modules/progress-linear';
+import ProgressBarCircle 		from './modules/progress-bar-circle';
 
 
 // Instantiate a new object using our modules/classes
@@ -30,6 +32,8 @@ var select2 						= new Select2();
 var swiper 							= new Swiper(); 
 var rdNavbar 						= new RDNavbar();
 var counterAnimate 			= new Counter();
+var progressLinear 			= new ProgressLinear();
+var progressBarCircle 	= new ProgressBarCircle();
 
 
 
