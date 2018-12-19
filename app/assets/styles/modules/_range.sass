@@ -1,1376 +1,1388 @@
 .range
-	display: flex
-	flex-direction: row
-	flex-wrap: wrap
-	margin-left: -15px
-	margin-right: -15px
+  margin-left: -15px
+  margin-right: -15px
+  > .range
+    margin-left: 0
+    margin-right: 0
 
-.range-20
-	margin-bottom: -20px
-.range-20 > *
-  margin-top: 0
-  margin-bottom: 20px
+.range-center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
 
-[class*="cell-"]
-	padding-left: 15px
-	padding-right: 15px 
+.range-left
+  -webkit-justify-content: flex-start
+  -ms-flex-pack: start
+  justify-content: flex-start
 
+.range-right
+  -webkit-justify-content: flex-end
+  -ms-flex-pack: end
+  justify-content: flex-end
 
-html.lt-ie-10 .range-narrow, .range-narrow
-	margin-left: -10px
-	margin-right: -10px
+.range-justify
+  -webkit-justify-content: space-between
+  -ms-flex-pack: justify
+  justify-content: space-between
 
-html.lt-ie-10 .range-narrow > [class*='cell'], .range-narrow > [class*='cell'], html.lt-ie-10 .range-narrow > * + [class*='cell'], .range-narrow > * + [class*='cell']
-	padding-left: 10px
-	padding-right: 10px
+.range-around
+  -webkit-justify-content: space-around
+  -ms-flex-pack: distribute
+  justify-content: space-around
 
-.range >
-	.cell-xs-1
-		-webkit-flex-basis: 10%
-		-ms-flex-preferred-size: 10%
-		flex-basis: 10%
-		max-width: 10%
-	.cell-xs-preffix-1
-		margin-left: 10%
-	.cell-xs-2
-		-webkit-flex-basis: 20%
-		-ms-flex-preferred-size: 20%
-		flex-basis: 20%
-		max-width: 20%
-	.cell-xs-preffix-2
-		margin-left: 20%
-	.cell-xs-3
-		-webkit-flex-basis: 30%
-		-ms-flex-preferred-size: 30%
-		flex-basis: 30%
-		max-width: 30%
-	.cell-xs-preffix-3
-		margin-left: 30%
-	.cell-xs-4
-		-webkit-flex-basis: 40%
-		-ms-flex-preferred-size: 40%
-		flex-basis: 40%
-		max-width: 40%
-	.cell-xs-preffix-4
-		margin-left: 40%
-	.cell-xs-5
-		-webkit-flex-basis: 50%
-		-ms-flex-preferred-size: 50%
-		flex-basis: 50%
-		max-width: 50%
-	.cell-xs-preffix-5
-		margin-left: 50%
-	.cell-xs-6
-		-webkit-flex-basis: 60%
-		-ms-flex-preferred-size: 60%
-		flex-basis: 60%
-		max-width: 60%
-	.cell-xs-preffix-6
-		margin-left: 60%
-	.cell-xs-7
-		-webkit-flex-basis: 70%
-		-ms-flex-preferred-size: 70%
-		flex-basis: 70%
-		max-width: 70%
-	.cell-xs-preffix-7
-		margin-left: 70%
-	.cell-xs-8
-		-webkit-flex-basis: 80%
-		-ms-flex-preferred-size: 80%
-		flex-basis: 80%
-		max-width: 80%
-	.cell-xs-preffix-8
-		margin-left: 80%
-	.cell-xs-9
-		-webkit-flex-basis: 90%
-		-ms-flex-preferred-size: 90%
-		flex-basis: 90%
-		max-width: 90%
-	.cell-xs-preffix-9
-		margin-left: 90%
-	.cell-xs-10
-		-webkit-flex-basis: 100%
-		-ms-flex-preferred-size: 100%
-		flex-basis: 100%
-		max-width: 100%
-	.cell-xs-preffix-10
-		margin-left: 100%
-	.cell-xs-1-5
-		-webkit-flex-basis: 20%
-		-ms-flex-preferred-size: 20%
-		flex-basis: 20%
-		max-width: 20%
+.range-top
+  -webkit-align-items: flex-start
+  -ms-flex-align: start
+  align-items: flex-start
 
-@media (min-width: 480px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+.range-reverse
+  -webkit-flex-direction: row-reverse
+  -ms-flex-direction: row-reverse
+  flex-direction: row-reverse
 
-@media (min-width: 480px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
+.range-middle
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
 
-@media (min-width: 480px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+.range-bottom
+  -webkit-align-items: flex-end
+  -ms-flex-align: end
+  align-items: flex-end
 
-@media (min-width: 480px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+.range-spacer
+  -webkit-flex-basis: 100%
+  -ms-flex-preferred-size: 100%
+  flex-basis: 100%
+  max-width: 100%
 
-@media (min-width: 480px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+[class*=cell-]
+  padding-left: 15px
+  padding-right: 15px
 
-@media (min-width: 768px)
-	* + [class*='cell-sm-']
-		margin-top: 0
-	.range-sm-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-sm-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-sm-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-sm-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-sm-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-sm-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-sm
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-sm-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-sm-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-sm-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-sm-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-sm-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-sm-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-sm-preffix-0
-			margin-left: 0
-		.cell-sm-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-sm-preffix-1
-			margin-left: 10%
-		.cell-sm-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-sm-preffix-2
-			margin-left: 20%
-		.cell-sm-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-sm-preffix-3
-			margin-left: 30%
-		.cell-sm-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-sm-preffix-4
-			margin-left: 40%
-		.cell-sm-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-sm-preffix-5
-			margin-left: 50%
-		.cell-sm-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-sm-preffix-6
-			margin-left: 60%
-		.cell-sm-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-sm-preffix-7
-			margin-left: 70%
-		.cell-sm-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-sm-preffix-8
-			margin-left: 80%
-		.cell-sm-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-sm-preffix-9
-			margin-left: 90%
-		.cell-sm-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-sm-preffix-10
-			margin-left: 100%
-		.cell-sm-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-
-@media (min-width: 768px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 768px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
-
-@media (min-width: 768px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 768px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 768px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 992px)
-	* + [class*='cell-md-']
-		margin-top: 0
-	.range-md-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-md-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-md-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-md-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-md-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-md-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-md
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-md-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-md-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-md-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-md-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-md-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-md-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-md-preffix-0
-			margin-left: 0
-		.cell-md-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-md-preffix-1
-			margin-left: 10%
-		.cell-md-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-md-preffix-2
-			margin-left: 20%
-		.cell-md-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-md-preffix-3
-			margin-left: 30%
-		.cell-md-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-md-preffix-4
-			margin-left: 40%
-		.cell-md-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-md-preffix-5
-			margin-left: 50%
-		.cell-md-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-md-preffix-6
-			margin-left: 60%
-		.cell-md-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-md-preffix-7
-			margin-left: 70%
-		.cell-md-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-md-preffix-8
-			margin-left: 80%
-		.cell-md-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-md-preffix-9
-			margin-left: 90%
-		.cell-md-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-md-preffix-10
-			margin-left: 100%
-		.cell-md-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-
-@media (min-width: 992px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 992px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
-
-@media (min-width: 992px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 992px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 992px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 * + .range, * + .range
+  margin-top: 20px
 
 @media (min-width: 1200px)
-	* + [class*='cell-lg-']
-		margin-top: 0
-	.range-lg-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-lg-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-lg-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-lg-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-lg-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-lg-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-lg
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-lg-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-lg-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-lg-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-lg-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-lg-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-lg-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-lg-preffix-0
-			margin-left: 0
-		.cell-lg-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-lg-preffix-1
-			margin-left: 10%
-		.cell-lg-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-lg-preffix-2
-			margin-left: 20%
-		.cell-lg-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-lg-preffix-3
-			margin-left: 30%
-		.cell-lg-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-lg-preffix-4
-			margin-left: 40%
-		.cell-lg-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-lg-preffix-5
-			margin-left: 50%
-		.cell-lg-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-lg-preffix-6
-			margin-left: 60%
-		.cell-lg-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-lg-preffix-7
-			margin-left: 70%
-		.cell-lg-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-lg-preffix-8
-			margin-left: 80%
-		.cell-lg-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-lg-preffix-9
-			margin-left: 90%
-		.cell-lg-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-lg-preffix-10
-			margin-left: 100%
-		.cell-lg-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
+  html.lt-ie-10 * + .range, * + .range
+    margin-top: 40px
 
-@media (min-width: 1200px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 * + .range-sm, * + .range-sm
+  margin-top: 30px
 
-@media (min-width: 1200px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
+html.lt-ie-10 * + .range-lg, * + .range-lg
+  margin-top: 60px
 
-@media (min-width: 1200px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 .range-condensed, .range-condensed
+  margin-left: 0
+  margin-right: 0
 
-@media (min-width: 1200px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 .range-condensed > [class*=cell], .range-condensed > [class*=cell]
+  padding-left: 0
+  padding-right: 0
 
-@media (min-width: 1200px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 .range-condensed > * + [class*=cell], .range-condensed > * + [class*=cell]
+  margin-top: 0
 
-@media (min-width: 1470px)
-	* + [class*='cell-xl-']
-		margin-top: 0
-	.range-xl-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-xl-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-xl-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-xl-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-xl-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-xl-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-xl
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-xl-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-xl-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-xl-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-xl-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-xl-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-xl-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-xl-preffix-0
-			margin-left: 0
-		.cell-xl-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-xl-preffix-1
-			margin-left: 10%
-		.cell-xl-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-xl-preffix-2
-			margin-left: 20%
-		.cell-xl-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-xl-preffix-3
-			margin-left: 30%
-		.cell-xl-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-xl-preffix-4
-			margin-left: 40%
-		.cell-xl-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-xl-preffix-5
-			margin-left: 50%
-		.cell-xl-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-xl-preffix-6
-			margin-left: 60%
-		.cell-xl-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-xl-preffix-7
-			margin-left: 70%
-		.cell-xl-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-xl-preffix-8
-			margin-left: 80%
-		.cell-xl-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-xl-preffix-9
-			margin-left: 90%
-		.cell-xl-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-xl-preffix-10
-			margin-left: 100%
-		.cell-xl-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
+html.lt-ie-10 .range-narrow, .range-narrow
+  margin-left: -10px
+  margin-right: -10px
 
-@media (min-width: 1470px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+html.lt-ie-10 .range-narrow > [class*=cell], .range-narrow > [class*=cell], html.lt-ie-10 .range-narrow > * + [class*=cell], .range-narrow > * + [class*=cell]
+  padding-left: 10px
+  padding-right: 10px
 
-@media (min-width: 1470px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
+.range
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -ms-flex: 0 1 auto
+  -webkit-flex: 0 1 auto
+  flex: 0 1 auto
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+  -webkit-flex-wrap: wrap
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  > .range
+    -webkit-flex-basis: 100%
+    -ms-flex-preferred-size: 100%
+    flex-basis: 100%
+    max-width: 100%
 
-@media (min-width: 1470px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
+.range-vertical
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
 
-@media (min-width: 1470px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 1470px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 1600px)
-	* + [class*='cell-xxl-']
-		margin-top: 0
-	.range-xxl-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-xxl-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-xxl-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-xxl-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-xxl-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-xxl-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-xxl
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-xxl-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-xxl-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-xxl-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-xxl-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-xxl-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-xxl-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-xxl-preffix-0
-			margin-left: 0
-		.cell-xxl-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-xxl-preffix-1
-			margin-left: 10%
-		.cell-xxl-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-xxl-preffix-2
-			margin-left: 20%
-		.cell-xxl-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-xxl-preffix-3
-			margin-left: 30%
-		.cell-xxl-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-xxl-preffix-4
-			margin-left: 40%
-		.cell-xxl-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-xxl-preffix-5
-			margin-left: 50%
-		.cell-xxl-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-xxl-preffix-6
-			margin-left: 60%
-		.cell-xxl-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-xxl-preffix-7
-			margin-left: 70%
-		.cell-xxl-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-xxl-preffix-8
-			margin-left: 80%
-		.cell-xxl-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-xxl-preffix-9
-			margin-left: 90%
-		.cell-xxl-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-xxl-preffix-10
-			margin-left: 100%
-		.cell-xxl-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-
-@media (min-width: 1600px) and (min-width: 480px)
-	.range > .cell-xs-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 1600px) and (min-width: 768px)
-	.range >
-		.cell-sm-25
-			-webkit-flex-basis: 25%
-			-ms-flex-preferred-size: 25%
-			flex-basis: 25%
-			max-width: 25%
-		.cell-sm-33
-			-webkit-flex-basis: 33.33%
-			-ms-flex-preferred-size: 33.33%
-			flex-basis: 33.33%
-			max-width: 33.33%
-
-@media (min-width: 1600px) and (min-width: 992px)
-	.range > .cell-md-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 1600px) and (min-width: 1200px)
-	.range > .cell-lg-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-@media (min-width: 1600px) and (min-width: 1470px)
-	.range > .cell-xl-25
-		-webkit-flex-basis: 25%
-		-ms-flex-preferred-size: 25%
-		flex-basis: 25%
-		max-width: 25%
-
-html.lt-ie-10 .range >
-	.cell-xs-1
-		margin-left: auto
-		margin-right: auto
-		max-width: 8.33333%
-	.cell-xs-2
-		margin-left: auto
-		margin-right: auto
-		max-width: 16.66667%
-	.cell-xs-3
-		margin-left: auto
-		margin-right: auto
-		max-width: 25%
-	.cell-xs-4
-		margin-left: auto
-		margin-right: auto
-		max-width: 33.33333%
-	.cell-xs-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 41.66667%
-	.cell-xs-6
-		margin-left: auto
-		margin-right: auto
-		max-width: 50%
-	.cell-xs-7
-		margin-left: auto
-		margin-right: auto
-		max-width: 58.33333%
-	.cell-xs-8
-		margin-left: auto
-		margin-right: auto
-		max-width: 66.66667%
-	.cell-xs-9
-		margin-left: auto
-		margin-right: auto
-		max-width: 75%
-	.cell-xs-10
-		margin-left: auto
-		margin-right: auto
-		max-width: 83.33333%
-	.cell-xs-11
-		margin-left: auto
-		margin-right: auto
-		max-width: 91.66667%
-	.cell-xs-12
-		margin-left: auto
-		margin-right: auto
-		max-width: 100%
-	.cell-xs-1-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 20%
-	.cell-sm-1
-		margin-left: auto
-		margin-right: auto
-		max-width: 8.33333%
-	.cell-sm-2
-		margin-left: auto
-		margin-right: auto
-		max-width: 16.66667%
-	.cell-sm-3
-		margin-left: auto
-		margin-right: auto
-		max-width: 25%
-	.cell-sm-4
-		margin-left: auto
-		margin-right: auto
-		max-width: 33.33333%
-	.cell-sm-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 41.66667%
-	.cell-sm-6
-		margin-left: auto
-		margin-right: auto
-		max-width: 50%
-	.cell-sm-7
-		margin-left: auto
-		margin-right: auto
-		max-width: 58.33333%
-	.cell-sm-8
-		margin-left: auto
-		margin-right: auto
-		max-width: 66.66667%
-	.cell-sm-9
-		margin-left: auto
-		margin-right: auto
-		max-width: 75%
-	.cell-sm-10
-		margin-left: auto
-		margin-right: auto
-		max-width: 83.33333%
-	.cell-sm-11
-		margin-left: auto
-		margin-right: auto
-		max-width: 91.66667%
-	.cell-sm-12
-		margin-left: auto
-		margin-right: auto
-		max-width: 100%
-	.cell-sm-1-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 20%
-	.cell-md-1
-		margin-left: auto
-		margin-right: auto
-		max-width: 8.33333%
-	.cell-md-2
-		margin-left: auto
-		margin-right: auto
-		max-width: 16.66667%
-	.cell-md-3
-		margin-left: auto
-		margin-right: auto
-		max-width: 25%
-	.cell-md-4
-		margin-left: auto
-		margin-right: auto
-		max-width: 33.33333%
-	.cell-md-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 41.66667%
-	.cell-md-6
-		margin-left: auto
-		margin-right: auto
-		max-width: 50%
-	.cell-md-7
-		margin-left: auto
-		margin-right: auto
-		max-width: 58.33333%
-	.cell-md-8
-		margin-left: auto
-		margin-right: auto
-		max-width: 66.66667%
-	.cell-md-9
-		margin-left: auto
-		margin-right: auto
-		max-width: 75%
-	.cell-md-10
-		margin-left: auto
-		margin-right: auto
-		max-width: 83.33333%
-	.cell-md-11
-		margin-left: auto
-		margin-right: auto
-		max-width: 91.66667%
-	.cell-md-12
-		margin-left: auto
-		margin-right: auto
-		max-width: 100%
-	.cell-md-1-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 20%
-	.cell-lg-1
-		margin-left: auto
-		margin-right: auto
-		max-width: 8.33333%
-	.cell-lg-2
-		margin-left: auto
-		margin-right: auto
-		max-width: 16.66667%
-	.cell-lg-3
-		margin-left: auto
-		margin-right: auto
-		max-width: 25%
-	.cell-lg-4
-		margin-left: auto
-		margin-right: auto
-		max-width: 33.33333%
-	.cell-lg-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 41.66667%
-	.cell-lg-6
-		margin-left: auto
-		margin-right: auto
-		max-width: 50%
-	.cell-lg-7
-		margin-left: auto
-		margin-right: auto
-		max-width: 58.33333%
-	.cell-lg-8
-		margin-left: auto
-		margin-right: auto
-		max-width: 66.66667%
-	.cell-lg-9
-		margin-left: auto
-		margin-right: auto
-		max-width: 75%
-	.cell-lg-10
-		margin-left: auto
-		margin-right: auto
-		max-width: 83.33333%
-	.cell-lg-11
-		margin-left: auto
-		margin-right: auto
-		max-width: 91.66667%
-	.cell-lg-12
-		margin-left: auto
-		margin-right: auto
-		max-width: 100%
-	.cell-lg-1-5
-		margin-left: auto
-		margin-right: auto
-		max-width: 20%
-	[class*="cell-xs-preffix-"], [class*="cell-sm-preffix-"], [class*="cell-md-preffix-"], [class*="cell-lg-preffix-"]
-		margin-left: auto
-
-
-
-.reveal-sm-flex
-	display: -ms-flexbox !important
-	display: -webkit-flex !important
-	display: flex !important
-
-.reveal-md-flex
-	display: -ms-flexbox !important
-	display: -webkit-flex !important
-	display: flex !important
+.range > [class*=cell]
+  -ms-flex: 0 0 auto
+  -webkit-flex: 0 0 auto
+  flex: 0 0 auto
+  -webkit-flex-basis: 100%
+  -ms-flex-preferred-size: 100%
+  flex-basis: 100%
+  max-width: 100%
 
 @media (min-width: 480px)
-	* + [class*='cell-xs-']
-		margin-top: 0
-	.range-xs-center
-		-webkit-justify-content: center
-		-ms-flex-pack: center
-		justify-content: center
-	.range-xs-left
-		-webkit-justify-content: flex-start
-		-ms-flex-pack: start
-		justify-content: flex-start
-	.range-xs-right
-		-webkit-justify-content: flex-end
-		-ms-flex-pack: end
-		justify-content: flex-end
-	.range-xs-justify
-		-webkit-justify-content: space-between
-		-ms-flex-pack: justify
-		justify-content: space-between
-	.range-xs-around
-		-webkit-justify-content: space-around
-		-ms-flex-pack: distribute
-		justify-content: space-around
-	.range-xs-top
-		-webkit-align-items: flex-start
-		-ms-flex-align: start
-		align-items: flex-start
-	.range-xs
-		-webkit-flex-direction: row
-		-ms-flex-direction: row
-		flex-direction: row
-	.range-xs-reverse
-		-webkit-flex-direction: row-reverse
-		-ms-flex-direction: row-reverse
-		flex-direction: row-reverse
-	.range-xs-middle
-		-webkit-align-items: center
-		-ms-flex-align: center
-		align-items: center
-	.range-xs-bottom
-		-webkit-align-items: flex-end
-		-ms-flex-align: end
-		align-items: flex-end
-	.cell-xs-top
-		-webkit-align-self: flex-start
-		-ms-flex-item-align: start
-		align-self: flex-start
-	.cell-xs-middle
-		-webkit-align-self: center
-		-ms-flex-item-align: center
-		align-self: center
-	.cell-xs-bottom
-		-webkit-align-self: flex-end
-		-ms-flex-item-align: end
-		align-self: flex-end
-	.range >
-		.cell-xs-preffix-0
-			margin-left: 0
-		.cell-xs-1
-			-webkit-flex-basis: 10%
-			-ms-flex-preferred-size: 10%
-			flex-basis: 10%
-			max-width: 10%
-		.cell-xs-preffix-1
-			margin-left: 10%
-		.cell-xs-2
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
-		.cell-xs-preffix-2
-			margin-left: 20%
-		.cell-xs-3
-			-webkit-flex-basis: 30%
-			-ms-flex-preferred-size: 30%
-			flex-basis: 30%
-			max-width: 30%
-		.cell-xs-preffix-3
-			margin-left: 30%
-		.cell-xs-4
-			-webkit-flex-basis: 40%
-			-ms-flex-preferred-size: 40%
-			flex-basis: 40%
-			max-width: 40%
-		.cell-xs-preffix-4
-			margin-left: 40%
-		.cell-xs-5
-			-webkit-flex-basis: 50%
-			-ms-flex-preferred-size: 50%
-			flex-basis: 50%
-			max-width: 50%
-		.cell-xs-preffix-5
-			margin-left: 50%
-		.cell-xs-6
-			-webkit-flex-basis: 60%
-			-ms-flex-preferred-size: 60%
-			flex-basis: 60%
-			max-width: 60%
-		.cell-xs-preffix-6
-			margin-left: 60%
-		.cell-xs-7
-			-webkit-flex-basis: 70%
-			-ms-flex-preferred-size: 70%
-			flex-basis: 70%
-			max-width: 70%
-		.cell-xs-preffix-7
-			margin-left: 70%
-		.cell-xs-8
-			-webkit-flex-basis: 80%
-			-ms-flex-preferred-size: 80%
-			flex-basis: 80%
-			max-width: 80%
-		.cell-xs-preffix-8
-			margin-left: 80%
-		.cell-xs-9
-			-webkit-flex-basis: 90%
-			-ms-flex-preferred-size: 90%
-			flex-basis: 90%
-			max-width: 90%
-		.cell-xs-preffix-9
-			margin-left: 90%
-		.cell-xs-10
-			-webkit-flex-basis: 100%
-			-ms-flex-preferred-size: 100%
-			flex-basis: 100%
-			max-width: 100%
-		.cell-xs-preffix-10
-			margin-left: 100%
-		.cell-xs-1-5
-			-webkit-flex-basis: 20%
-			-ms-flex-preferred-size: 20%
-			flex-basis: 20%
-			max-width: 20%
+  * + [class*=cell-xs-]
+    margin-top: 0
+  .range-xs-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-xs-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-xs-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-xs-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-xs-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-xs-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-xs
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-xs-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-xs-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-xs-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-xs-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-xs-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-xs-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-xs-preffix-0
+      margin-left: 0
+    .cell-xs-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-xs-preffix-1
+      margin-left: 10%
+    .cell-xs-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-xs-preffix-2
+      margin-left: 20%
+    .cell-xs-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-xs-preffix-3
+      margin-left: 30%
+    .cell-xs-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-xs-preffix-4
+      margin-left: 40%
+    .cell-xs-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-xs-preffix-5
+      margin-left: 50%
+    .cell-xs-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-xs-preffix-6
+      margin-left: 60%
+    .cell-xs-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-xs-preffix-7
+      margin-left: 70%
+    .cell-xs-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-xs-preffix-8
+      margin-left: 80%
+    .cell-xs-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-xs-preffix-9
+      margin-left: 90%
+    .cell-xs-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-xs-preffix-10
+      margin-left: 100%
+    .cell-xs-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 480px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 480px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 480px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 480px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 480px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 768px)
+  * + [class*=cell-sm-]
+    margin-top: 0
+  .range-sm-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-sm-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-sm-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-sm-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-sm-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-sm-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-sm
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-sm-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-sm-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-sm-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-sm-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-sm-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-sm-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-sm-preffix-0
+      margin-left: 0
+    .cell-sm-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-sm-preffix-1
+      margin-left: 10%
+    .cell-sm-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-sm-preffix-2
+      margin-left: 20%
+    .cell-sm-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-sm-preffix-3
+      margin-left: 30%
+    .cell-sm-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-sm-preffix-4
+      margin-left: 40%
+    .cell-sm-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-sm-preffix-5
+      margin-left: 50%
+    .cell-sm-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-sm-preffix-6
+      margin-left: 60%
+    .cell-sm-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-sm-preffix-7
+      margin-left: 70%
+    .cell-sm-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-sm-preffix-8
+      margin-left: 80%
+    .cell-sm-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-sm-preffix-9
+      margin-left: 90%
+    .cell-sm-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-sm-preffix-10
+      margin-left: 100%
+    .cell-sm-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 768px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 768px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 768px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 768px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 768px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 992px)
+  * + [class*=cell-md-]
+    margin-top: 0
+  .range-md-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-md-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-md-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-md-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-md-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-md-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-md
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-md-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-md-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-md-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-md-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-md-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-md-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-md-preffix-0
+      margin-left: 0
+    .cell-md-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-md-preffix-1
+      margin-left: 10%
+    .cell-md-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-md-preffix-2
+      margin-left: 20%
+    .cell-md-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-md-preffix-3
+      margin-left: 30%
+    .cell-md-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-md-preffix-4
+      margin-left: 40%
+    .cell-md-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-md-preffix-5
+      margin-left: 50%
+    .cell-md-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-md-preffix-6
+      margin-left: 60%
+    .cell-md-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-md-preffix-7
+      margin-left: 70%
+    .cell-md-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-md-preffix-8
+      margin-left: 80%
+    .cell-md-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-md-preffix-9
+      margin-left: 90%
+    .cell-md-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-md-preffix-10
+      margin-left: 100%
+    .cell-md-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 992px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 992px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 992px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 992px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 992px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1200px)
+  * + [class*=cell-lg-]
+    margin-top: 0
+  .range-lg-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-lg-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-lg-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-lg-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-lg-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-lg-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-lg
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-lg-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-lg-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-lg-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-lg-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-lg-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-lg-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-lg-preffix-0
+      margin-left: 0
+    .cell-lg-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-lg-preffix-1
+      margin-left: 10%
+    .cell-lg-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-lg-preffix-2
+      margin-left: 20%
+    .cell-lg-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-lg-preffix-3
+      margin-left: 30%
+    .cell-lg-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-lg-preffix-4
+      margin-left: 40%
+    .cell-lg-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-lg-preffix-5
+      margin-left: 50%
+    .cell-lg-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-lg-preffix-6
+      margin-left: 60%
+    .cell-lg-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-lg-preffix-7
+      margin-left: 70%
+    .cell-lg-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-lg-preffix-8
+      margin-left: 80%
+    .cell-lg-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-lg-preffix-9
+      margin-left: 90%
+    .cell-lg-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-lg-preffix-10
+      margin-left: 100%
+    .cell-lg-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 1200px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1200px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 1200px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1200px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1200px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1470px)
+  * + [class*=cell-xl-]
+    margin-top: 0
+  .range-xl-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-xl-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-xl-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-xl-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-xl-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-xl-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-xl
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-xl-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-xl-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-xl-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-xl-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-xl-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-xl-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-xl-preffix-0
+      margin-left: 0
+    .cell-xl-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-xl-preffix-1
+      margin-left: 10%
+    .cell-xl-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-xl-preffix-2
+      margin-left: 20%
+    .cell-xl-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-xl-preffix-3
+      margin-left: 30%
+    .cell-xl-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-xl-preffix-4
+      margin-left: 40%
+    .cell-xl-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-xl-preffix-5
+      margin-left: 50%
+    .cell-xl-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-xl-preffix-6
+      margin-left: 60%
+    .cell-xl-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-xl-preffix-7
+      margin-left: 70%
+    .cell-xl-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-xl-preffix-8
+      margin-left: 80%
+    .cell-xl-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-xl-preffix-9
+      margin-left: 90%
+    .cell-xl-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-xl-preffix-10
+      margin-left: 100%
+    .cell-xl-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 1470px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1470px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 1470px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1470px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1470px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1600px)
+  * + [class*=cell-xxl-]
+    margin-top: 0
+  .range-xxl-center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+  .range-xxl-left
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .range-xxl-right
+    -webkit-justify-content: flex-end
+    -ms-flex-pack: end
+    justify-content: flex-end
+  .range-xxl-justify
+    -webkit-justify-content: space-between
+    -ms-flex-pack: justify
+    justify-content: space-between
+  .range-xxl-around
+    -webkit-justify-content: space-around
+    -ms-flex-pack: distribute
+    justify-content: space-around
+  .range-xxl-top
+    -webkit-align-items: flex-start
+    -ms-flex-align: start
+    align-items: flex-start
+  .range-xxl
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+  .range-xxl-reverse
+    -webkit-flex-direction: row-reverse
+    -ms-flex-direction: row-reverse
+    flex-direction: row-reverse
+  .range-xxl-middle
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+  .range-xxl-bottom
+    -webkit-align-items: flex-end
+    -ms-flex-align: end
+    align-items: flex-end
+  .cell-xxl-top
+    -webkit-align-self: flex-start
+    -ms-flex-item-align: start
+    align-self: flex-start
+  .cell-xxl-middle
+    -webkit-align-self: center
+    -ms-flex-item-align: center
+    align-self: center
+  .cell-xxl-bottom
+    -webkit-align-self: flex-end
+    -ms-flex-item-align: end
+    align-self: flex-end
+  .range >
+    .cell-xxl-preffix-0
+      margin-left: 0
+    .cell-xxl-1
+      -webkit-flex-basis: 10%
+      -ms-flex-preferred-size: 10%
+      flex-basis: 10%
+      max-width: 10%
+    .cell-xxl-preffix-1
+      margin-left: 10%
+    .cell-xxl-2
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+    .cell-xxl-preffix-2
+      margin-left: 20%
+    .cell-xxl-3
+      -webkit-flex-basis: 30%
+      -ms-flex-preferred-size: 30%
+      flex-basis: 30%
+      max-width: 30%
+    .cell-xxl-preffix-3
+      margin-left: 30%
+    .cell-xxl-4
+      -webkit-flex-basis: 40%
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+    .cell-xxl-preffix-4
+      margin-left: 40%
+    .cell-xxl-5
+      -webkit-flex-basis: 50%
+      -ms-flex-preferred-size: 50%
+      flex-basis: 50%
+      max-width: 50%
+    .cell-xxl-preffix-5
+      margin-left: 50%
+    .cell-xxl-6
+      -webkit-flex-basis: 60%
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+    .cell-xxl-preffix-6
+      margin-left: 60%
+    .cell-xxl-7
+      -webkit-flex-basis: 70%
+      -ms-flex-preferred-size: 70%
+      flex-basis: 70%
+      max-width: 70%
+    .cell-xxl-preffix-7
+      margin-left: 70%
+    .cell-xxl-8
+      -webkit-flex-basis: 80%
+      -ms-flex-preferred-size: 80%
+      flex-basis: 80%
+      max-width: 80%
+    .cell-xxl-preffix-8
+      margin-left: 80%
+    .cell-xxl-9
+      -webkit-flex-basis: 90%
+      -ms-flex-preferred-size: 90%
+      flex-basis: 90%
+      max-width: 90%
+    .cell-xxl-preffix-9
+      margin-left: 90%
+    .cell-xxl-10
+      -webkit-flex-basis: 100%
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    .cell-xxl-preffix-10
+      margin-left: 100%
+    .cell-xxl-1-5
+      -webkit-flex-basis: 20%
+      -ms-flex-preferred-size: 20%
+      flex-basis: 20%
+      max-width: 20%
+
+@media (min-width: 1600px) and (min-width: 480px)
+  .range > .cell-xs-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1600px) and (min-width: 768px)
+  .range >
+    .cell-sm-25
+      -webkit-flex-basis: 25%
+      -ms-flex-preferred-size: 25%
+      flex-basis: 25%
+      max-width: 25%
+    .cell-sm-33
+      -webkit-flex-basis: 33.33%
+      -ms-flex-preferred-size: 33.33%
+      flex-basis: 33.33%
+      max-width: 33.33%
+
+@media (min-width: 1600px) and (min-width: 992px)
+  .range > .cell-md-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1600px) and (min-width: 1200px)
+  .range > .cell-lg-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+@media (min-width: 1600px) and (min-width: 1470px)
+  .range > .cell-xl-25
+    -webkit-flex-basis: 25%
+    -ms-flex-preferred-size: 25%
+    flex-basis: 25%
+    max-width: 25%
+
+html.lt-ie-10 .range >
+  .cell-xs-1
+    margin-left: auto
+    margin-right: auto
+    max-width: 8.33333%
+  .cell-xs-2
+    margin-left: auto
+    margin-right: auto
+    max-width: 16.66667%
+  .cell-xs-3
+    margin-left: auto
+    margin-right: auto
+    max-width: 25%
+  .cell-xs-4
+    margin-left: auto
+    margin-right: auto
+    max-width: 33.33333%
+  .cell-xs-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 41.66667%
+  .cell-xs-6
+    margin-left: auto
+    margin-right: auto
+    max-width: 50%
+  .cell-xs-7
+    margin-left: auto
+    margin-right: auto
+    max-width: 58.33333%
+  .cell-xs-8
+    margin-left: auto
+    margin-right: auto
+    max-width: 66.66667%
+  .cell-xs-9
+    margin-left: auto
+    margin-right: auto
+    max-width: 75%
+  .cell-xs-10
+    margin-left: auto
+    margin-right: auto
+    max-width: 83.33333%
+  .cell-xs-11
+    margin-left: auto
+    margin-right: auto
+    max-width: 91.66667%
+  .cell-xs-12
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+  .cell-xs-1-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 20%
+  .cell-sm-1
+    margin-left: auto
+    margin-right: auto
+    max-width: 8.33333%
+  .cell-sm-2
+    margin-left: auto
+    margin-right: auto
+    max-width: 16.66667%
+  .cell-sm-3
+    margin-left: auto
+    margin-right: auto
+    max-width: 25%
+  .cell-sm-4
+    margin-left: auto
+    margin-right: auto
+    max-width: 33.33333%
+  .cell-sm-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 41.66667%
+  .cell-sm-6
+    margin-left: auto
+    margin-right: auto
+    max-width: 50%
+  .cell-sm-7
+    margin-left: auto
+    margin-right: auto
+    max-width: 58.33333%
+  .cell-sm-8
+    margin-left: auto
+    margin-right: auto
+    max-width: 66.66667%
+  .cell-sm-9
+    margin-left: auto
+    margin-right: auto
+    max-width: 75%
+  .cell-sm-10
+    margin-left: auto
+    margin-right: auto
+    max-width: 83.33333%
+  .cell-sm-11
+    margin-left: auto
+    margin-right: auto
+    max-width: 91.66667%
+  .cell-sm-12
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+  .cell-sm-1-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 20%
+  .cell-md-1
+    margin-left: auto
+    margin-right: auto
+    max-width: 8.33333%
+  .cell-md-2
+    margin-left: auto
+    margin-right: auto
+    max-width: 16.66667%
+  .cell-md-3
+    margin-left: auto
+    margin-right: auto
+    max-width: 25%
+  .cell-md-4
+    margin-left: auto
+    margin-right: auto
+    max-width: 33.33333%
+  .cell-md-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 41.66667%
+  .cell-md-6
+    margin-left: auto
+    margin-right: auto
+    max-width: 50%
+  .cell-md-7
+    margin-left: auto
+    margin-right: auto
+    max-width: 58.33333%
+  .cell-md-8
+    margin-left: auto
+    margin-right: auto
+    max-width: 66.66667%
+  .cell-md-9
+    margin-left: auto
+    margin-right: auto
+    max-width: 75%
+  .cell-md-10
+    margin-left: auto
+    margin-right: auto
+    max-width: 83.33333%
+  .cell-md-11
+    margin-left: auto
+    margin-right: auto
+    max-width: 91.66667%
+  .cell-md-12
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+  .cell-md-1-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 20%
+  .cell-lg-1
+    margin-left: auto
+    margin-right: auto
+    max-width: 8.33333%
+  .cell-lg-2
+    margin-left: auto
+    margin-right: auto
+    max-width: 16.66667%
+  .cell-lg-3
+    margin-left: auto
+    margin-right: auto
+    max-width: 25%
+  .cell-lg-4
+    margin-left: auto
+    margin-right: auto
+    max-width: 33.33333%
+  .cell-lg-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 41.66667%
+  .cell-lg-6
+    margin-left: auto
+    margin-right: auto
+    max-width: 50%
+  .cell-lg-7
+    margin-left: auto
+    margin-right: auto
+    max-width: 58.33333%
+  .cell-lg-8
+    margin-left: auto
+    margin-right: auto
+    max-width: 66.66667%
+  .cell-lg-9
+    margin-left: auto
+    margin-right: auto
+    max-width: 75%
+  .cell-lg-10
+    margin-left: auto
+    margin-right: auto
+    max-width: 83.33333%
+  .cell-lg-11
+    margin-left: auto
+    margin-right: auto
+    max-width: 91.66667%
+  .cell-lg-12
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+  .cell-lg-1-5
+    margin-left: auto
+    margin-right: auto
+    max-width: 20%
+  [class*=cell-xs-preffix-], [class*=cell-sm-preffix-], [class*=cell-md-preffix-], [class*=cell-lg-preffix-]
+    margin-left: auto

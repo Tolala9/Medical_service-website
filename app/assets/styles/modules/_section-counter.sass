@@ -1,0 +1,60 @@
+.section-counter
+	position: relative
+
+@media (min-width: 992px)
+	.section-counter .cell-md-2 + .cell-md-2
+		border-left: 1px solid #5b6674
+
+.counter-wrap
+	.heading-1
+		font-weight: 400
+		letter-spacing: 0
+		line-height: 1
+	.small
+		font-size: 14px
+		font-weight: 400
+		font-family: roboto, Helvetica, Arial, sans-serif
+		letter-spacing: .05em
+		text-transform: uppercase
+	* + p
+		margin-top: 0
+
+.counter-plus:after
+	content: "+"
+
+@media (min-width: 992px)
+	.section-counter-decoration
+		position: absolute
+		top: 50%
+		width: 8%
+		transform: translateY(-50%)
+		border-top: 1px solid #5b6674
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 17px
+			height: 17px
+			background-color: #00bb6d
+		&:nth-child(1)
+			left: 20px
+			&:before
+				right: 0
+		&:nth-child(2)
+			right: 20px
+			&:before
+				left: 0
+
+#lg-counter
+	color: #cacaca
+	display: inline-block
+	font-size: 16px
+	padding-left: 20px
+	padding-top: 12px
+	vertical-align: middle
+	margin-right: auto
+
+.lg-skin-light.lg-outer
+	#lg-counter, .lg-toolbar .lg-icon, &.lg-dropdown-active #lg-share
+		color: #353535

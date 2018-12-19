@@ -17,25 +17,106 @@ body
 	font-size: 16px
 
 
-h1, h2, h3, h4, h5, h6, [class*='heading-']
+h1, h2, h3, h4, h5, h6, [class*=heading-]
 	margin-top: 0
 	margin-bottom: 0
-	font-family: "Montserrat", sans-serif
+	font-family: montserrat, sans-serif
 	font-weight: 400
-	letter-spacing: 0.05em
+	letter-spacing: .05em
 	color: #151515
-h1
+
+h1 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h2 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h3 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h4 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h5 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h6 a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+[class*=heading-] a
+	color: inherit
+	&:focus, &:active
+		color: inherit
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, [class*=heading-] a:hover
+	color: #00bb6d
+
+h1, .heading-1
 	font-size: 38px
 	line-height: 1.2
-h2
+
+@media (min-width: 1470px)
+	h1, .heading-1
+		font-size: 58px
+
+h2, .heading-2
 	font-size: 32px
 	line-height: 1.2
-h3
+
+@media (min-width: 1470px)
+	h2, .heading-2
+		font-size: 42px
+
+h2 .heading-4, .heading-2 .heading-4
+	display: block
+	font-weight: 400
+	line-height: 1.2
+
+h2 .heading-main-text, .heading-2 .heading-main-text
+	display: inline-block
+
+h2 * + .heading-main-text, .heading-2 * + .heading-main-text
+	margin-top: 5px
+
+@media (min-width: 1200px)
+	h2 * + .heading-main-text, .heading-2 * + .heading-main-text
+		margin-top: 19px
+
+h3, .heading-3
 	font-size: 24px
 	line-height: 1.2
+
+@media (min-width: 1470px)
+	h3, .heading-3
+		font-size: 36px
+
 h4, .heading-4
 	font-size: 20px
 	line-height: 1.2
+
+@media (min-width: 1470px)
+	h4, .heading-4
+		font-size: 20px
+
+h5, .heading-5
+	line-height: 1.441
+	font-size: 18px
+
+h6, .heading-6
+	line-height: 1.2
+	font-size: 15px
 * + h4
 	margin-top: 15px
 i + h4
@@ -46,11 +127,11 @@ i + h4
 		color: $greenText
 
 a
-  color: #00bb6d
-  &:focus, &:active
-    color: #00bb6d
+	color: #00bb6d
+	&:focus, &:active
+		color: #00bb6d
 
-    
+		
 h5, .heading-5
 	font-size: 18px
 	line-height: 1.441
@@ -280,3 +361,9 @@ label
 			color: #6a7688
 		&:hover
 			color: #00bb6d
+
+
+
+
+.bg-gray-bright
+	background-color: #3c444f
