@@ -132,6 +132,9 @@ var _dateCountdown2 = _interopRequireDefault(_dateCountdown);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Scroller		 					from './modules/scroller';
+
+
 // Instantiate a new object using our modules/classes
 var john = new _Person2.default("John Doe", "blue"); // 3rd party packages from NPM
 // var $ = require('jquery');
@@ -153,6 +156,8 @@ var counterAnimate = new _counter2.default();
 var progressLinear = new _progressLinear2.default();
 var progressBarCircle = new _progressBarCircle2.default();
 var dateCountdown = new _dateCountdown2.default();
+// var scroller 			      = new Scroller();
+
 
 // owlCarousel.hello();
 // $("h1").remove();//test jquery

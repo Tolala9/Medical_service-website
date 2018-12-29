@@ -1,7 +1,7 @@
 class Parallax{
 
 	constructor() {
-		this.allMethods();  
+		this.allMethods();   
 	}
 
 

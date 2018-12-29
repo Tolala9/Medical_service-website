@@ -17,6 +17,7 @@ import Counter 							from './modules/counter';
 import ProgressLinear 			from './modules/progress-linear';
 import ProgressBarCircle 		from './modules/progress-bar-circle';
 import DateCountdown		 		from './modules/date-countdown';
+// import Scroller		 					from './modules/scroller';
 
 
 // Instantiate a new object using our modules/classes
@@ -29,13 +30,14 @@ var slick 							= new SlickSlider();
 var rdMailForm 					= new RDMailForm();
 var copyrightYear 			= new CopyrightYear();
 var uitotop 						= new UIToTop();
-var select2 						= new Select2();
+var select2 						= new Select2(); 
 var swiper 							= new Swiper(); 
 var rdNavbar 						= new RDNavbar();
 var counterAnimate 			= new Counter();
 var progressLinear 			= new ProgressLinear();
 var progressBarCircle 	= new ProgressBarCircle();
 var dateCountdown 			= new DateCountdown();
+// var scroller 			      = new Scroller();
 
 
 

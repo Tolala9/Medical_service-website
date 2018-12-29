@@ -1,7 +1,17 @@
 package-lock.json/
 app/assets/images/old/
 addition
+gulp/tasks/deploy.js
 
+# On layout
+/**/node_modules/
+/**/dist/
+/**/.git/
+/**/app/css/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
 
 
 

@@ -3,7 +3,7 @@ concat = require('gulp-concat'),
 uglify = require('gulp-uglify');
 
 gulp.task('coreJs', function() {
-	return gulp.src([
+	return gulp.src([ 
 		'./app/assets/libs/Jquery_2.2.4/jquery_2.24.min.js',
 		'./app/assets/libs/OwlCarousel/owl.carousel.js',
 		'./app/assets/libs/Parallax/materianizeParallax.js',
@@ -16,7 +16,8 @@ gulp.task('coreJs', function() {
 		'./app/assets/libs/WOW/wow.js',
 		'./app/assets/libs/CountTo/count-to.js',
 		'./app/assets/libs/Circle-progress/circle-progress.js',
-		'./app/assets/libs/TimeCircles/time-circles.js'
+		'./app/assets/libs/TimeCircles/time-circles.js',
+		'./app/assets/libs/SmoothScroll/smooth-scroll.js'
 		])
 	.pipe(concat('core.min.js'))
 	// .pipe(uglify()) // minimize
