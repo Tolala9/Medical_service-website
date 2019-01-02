@@ -1,0 +1,545 @@
+.cd-schedule
+  position: relative
+  margin: 2em 0
+  &::before
+    content: 'mobile'
+    display: none
+  .timeline
+    display: none
+  .events
+    position: relative
+    z-index: 1
+    .events-group
+      margin-bottom: 30px
+    .top-info
+      width: 100%
+      padding: 0 5%
+      > span
+        display: inline-block
+        line-height: 1.2
+        margin-bottom: 10px
+        font-weight: 400
+        color: #151515
+    .events-group > ul
+      position: relative
+      padding: 0 5%
+      display: flex
+      overflow-x: scroll
+      -webkit-overflow-scrolling: touch
+      &::after
+        display: inline-block
+        content: '-'
+        width: 1px
+        height: 100%
+        opacity: 0
+        color: transparent
+    .single-event
+      flex-shrink: 0
+      float: left
+      height: 150px
+      width: 70%
+      max-width: 300px
+      margin-right: 20px
+      transition: opacity 0.2s, background 0.2s
+      &:last-of-type
+        margin-right: 5%
+      a
+        display: block
+        height: 100%
+        padding: 0.8em
+      .event-info
+        display: none
+  &.loading .events .single-event
+    opacity: 0
+  a
+    transition: 0s !important
+  .event-name, .event-place, .event-content
+    display: block
+    color: #fff
+    font-weight: 700
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  .event-name, .event-content, .event-place
+    font-size: 14px
+    font-weight: 400
+  .event-date
+    display: block
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.2
+    margin-top: 17px
+    margin-bottom: 17px
+    opacity: 0.7
+  .single-event[data-event=event-1], [data-event=event-1] .header-bg
+    background: #00bb6d
+
+@media only screen and (min-width: 992px)
+  .cd-schedule
+    width: 100%
+    max-width: 1470px
+    margin: 2em auto
+    &::after
+      clear: both
+      content: ""
+      display: block
+    &::before
+      content: "desktop"
+
+@media only screen and (min-width: 992px)
+  .cd-schedule .timeline
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    padding-top: 60px
+
+@media only screen and (min-width: 992px) and (min-width: 992px)
+  .cd-schedule .timeline
+    position: relative
+
+@media only screen and (min-width: 992px)
+  .cd-schedule .timeline li
+    position: relative
+    height: 60px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+    &:last-of-type::after, span
+      display: none
+
+@media only screen and (min-width: 1200px)
+  .cd-schedule .timeline li
+    display: flex
+    align-items: center
+    &::after
+      width: calc(100% - 60px)
+      left: 60px
+    &:nth-child(odd)
+      background-color: #f2f3f8
+    span
+      width: 60px
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      color: #151515
+    &:nth-of-type(2n) span
+      display: none
+
+@media (min-width: 1470px)
+  .cd-schedule .timeline li
+    &:after
+      width: calc(100% - 160px)
+      left: 160px
+    span
+      width: 160px
+
+@media (min-width: 992px)
+  .cd-schedule .events
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+@media only screen and (min-width: 768px)
+  .cd-schedule .events .single-event
+    width: 40%
+
+@media only screen and (min-width: 992px)
+  .cd-schedule .events
+    float: left
+    width: 100%
+    .events-group
+      width: 14.28571%
+      float: left
+      margin-bottom: 0
+      &:not(:first-of-type)
+        border-left-width: 0
+    .top-info
+      display: table
+      height: 60px
+      padding: 0
+      > span
+        display: table-cell
+        vertical-align: middle
+        padding: 0 .5em
+        text-align: center
+        font-weight: 400
+        margin-bottom: 0
+    .events-group > ul
+      height: 1140px
+      display: block
+      overflow: visible
+      padding: 0
+      &::after
+        clear: both
+        content: ""
+        display: block
+        display: none
+    .single-event
+      position: absolute
+      z-index: 3
+      width: calc(100% + 2px)
+      left: -1px
+      flex-shrink: 1
+      height: auto
+      max-width: none
+      margin-right: 0
+      a
+        padding: 1.2em
+      &:last-of-type
+        margin-right: 0
+      &.selected-event
+        visibility: hidden
+
+@media only screen and (min-width: 1200px)
+  .cd-schedule .events
+    width: calc(100% - 60px)
+    margin-left: 60px
+
+@media (min-width: 1470px)
+  .cd-schedule .events
+    width: calc(100% - 160px)
+    margin-left: 160px
+
+@media only screen and (min-width: 1200px)
+  .cd-schedule .event-name
+    font-size: 16px
+
+[data-event=event-1] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-1]:hover
+      background: #00d57c
+    &[data-event=event-2]
+      background: #00b6ff
+  [data-event=event-2] .header-bg
+    background: #00b6ff
+
+[data-event=event-2] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-2]:hover
+      background: #1abdff
+    &[data-event=event-3]
+      background: #deb887
+  [data-event=event-3] .header-bg
+    background: #deb887
+
+[data-event=event-3] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-3]:hover
+      background: #e4c49b
+    &[data-event=event-4]
+      background: #ff685a
+  [data-event=event-4] .header-bg
+    background: #ff685a
+
+[data-event=event-4] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-4]:hover
+      background: #ff7f74
+    &[data-event=event-5]
+      background: #00b6ff
+  [data-event=event-5] .header-bg
+    background: #00b6ff
+
+[data-event=event-5] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-5]:hover
+      background: #1abdff
+    &[data-event=event-6]
+      background: #006a79
+  [data-event=event-6] .header-bg
+    background: #006a79
+
+[data-event=event-6] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-6]:hover
+      background: #008093
+    &[data-event=event-7]
+      background: #c773bf
+  [data-event=event-7] .header-bg
+    background: #c773bf
+
+[data-event=event-7] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event
+    &[data-event=event-7]:hover
+      background: #ce85c7
+    &[data-event=event-8]
+      background: #4c4cbf
+  [data-event=event-8] .header-bg
+    background: #4c4cbf
+
+[data-event=event-8] .event-date
+  color: #fff
+
+.cd-schedule
+  .single-event[data-event=event-8]:hover
+    background: #5f5fc6
+  .event-modal
+    position: fixed
+    z-index: 1002
+    top: 0
+    right: 0
+    height: 100%
+    width: 100%
+    visibility: hidden
+    transform: translateZ(0)
+    transform: translateX(100%)
+    transition: transform .4s, visibility .4s
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1)
+    .header
+      position: relative
+      height: 70px
+      display: table
+      width: 100%
+      .content
+        position: relative
+        z-index: 3
+        display: table-cell
+        vertical-align: middle
+        padding: 0.6em 5%
+    .body
+      position: relative
+      width: 100%
+      height: calc(100% - 70px)
+    .event-info
+      position: relative
+      z-index: 2
+      line-height: 1.4
+      height: 100%
+      overflow: hidden
+      padding: 1.2em 3em 1.2em 2.5em
+      text-align: left
+      > div
+        overflow: auto
+        height: 100%
+        padding: 1.4em 5%
+    .header-bg
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+    .body-bg
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      z-index: 1
+      background: #fff
+      transform-origin: top left
+    .header-bg
+      z-index: 2
+      transform-origin: top center
+    .close
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 3
+      background: rgba(0, 0, 0, 0.1)
+      color: transparent
+      white-space: nowrap
+      text-indent: 100%
+      height: 70px
+      width: 70px
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 2px
+        height: 22px
+        background: #fff
+        -webkit-backface-visibility: hidden
+        backface-visibility: hidden
+      &::before
+        transform: translateX(-50%) translateY(-50%) rotate(45deg)
+      &::after
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg)
+    .event-date
+      display: none
+    &.no-transition
+      transition: none
+      .header-bg, .body-bg
+        transition: none
+  &.modal-is-open .event-modal
+    transform: translateX(0)
+    visibility: visible
+    .event-info > div
+      -webkit-overflow-scrolling: touch
+  .cover-layer
+    position: fixed
+    z-index: 1001
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.8)
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.4s, visibility 0.4s
+  &.modal-is-open .cover-layer
+    opacity: 1
+    visibility: visible
+
+@media (min-width: 768px)
+  .cd-schedule .event-modal
+    height: 60%
+    width: 90%
+
+@media only screen and (min-width: 992px)
+  .cd-schedule .event-modal
+    right: auto
+    width: auto
+    height: auto
+    transform: translateX(0)
+    will-change: transform, width, height
+    transition: height .4s, width .4s, transform .4s, visibility .4s
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1)
+    .header
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      height: 100%
+      .content
+        display: block
+        padding: 0.8em
+    .event-info > div
+      padding: 2em 3em 2em 2em
+    .body
+      height: 100%
+      width: auto
+    .header-bg, .body-bg
+      transform: translateZ(0)
+      will-change: transform
+      backface-visibility: hidden
+    .header-bg
+      transition: transform .4s
+      transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1)
+    .body-bg
+      opacity: 0
+      transform: none
+    .event-date
+      display: block
+    .close, .event-info
+      opacity: 0
+    .close
+      width: 40px
+      height: 40px
+      background: 0 0
+      &::after, &::before
+        background: #222
+        height: 16px
+
+@media only screen and (min-width: 1200px)
+  .cd-schedule .event-modal .header .content
+    padding: 1.2em
+
+@media (min-width: 768px)
+  .cd-schedule.modal-is-open .event-modal
+    transform: translate(-5%, 30%)
+
+@media only screen and (min-width: 992px)
+  .cd-schedule
+    &.animation-completed .event-modal .close, &.content-loaded.animation-completed .event-modal .event-info
+      opacity: 1
+      transition: opacity 0.2s
+    &.modal-is-open .body-bg
+      opacity: 1
+      transition: transform .4s
+      transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1)
+
+.cd-schedule-wrap.event-0 .single-event:not([data-event=event-0])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-0 .single-event:not([data-event=event-0]), .tablet .cd-schedule-wrap.event-0 .single-event:not([data-event=event-0]), .mobile .cd-schedule-wrap.event-0 .single-event:not([data-event=event-0])
+  display: none !important
+
+.cd-schedule-wrap.event-1 .single-event:not([data-event=event-1])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-1 .single-event:not([data-event=event-1]), .tablet .cd-schedule-wrap.event-1 .single-event:not([data-event=event-1]), .mobile .cd-schedule-wrap.event-1 .single-event:not([data-event=event-1])
+  display: none !important
+
+.cd-schedule-wrap.event-2 .single-event:not([data-event=event-2])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-2 .single-event:not([data-event=event-2]), .tablet .cd-schedule-wrap.event-2 .single-event:not([data-event=event-2]), .mobile .cd-schedule-wrap.event-2 .single-event:not([data-event=event-2])
+  display: none !important
+
+.cd-schedule-wrap.event-3 .single-event:not([data-event=event-3])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-3 .single-event:not([data-event=event-3]), .tablet .cd-schedule-wrap.event-3 .single-event:not([data-event=event-3]), .mobile .cd-schedule-wrap.event-3 .single-event:not([data-event=event-3])
+  display: none !important
+
+.cd-schedule-wrap.event-4 .single-event:not([data-event=event-4])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-4 .single-event:not([data-event=event-4]), .tablet .cd-schedule-wrap.event-4 .single-event:not([data-event=event-4]), .mobile .cd-schedule-wrap.event-4 .single-event:not([data-event=event-4])
+  display: none !important
+
+.cd-schedule-wrap.event-5 .single-event:not([data-event=event-5])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-5 .single-event:not([data-event=event-5]), .tablet .cd-schedule-wrap.event-5 .single-event:not([data-event=event-5]), .mobile .cd-schedule-wrap.event-5 .single-event:not([data-event=event-5])
+  display: none !important
+
+.cd-schedule-wrap.event-6 .single-event:not([data-event=event-6])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-6 .single-event:not([data-event=event-6]), .tablet .cd-schedule-wrap.event-6 .single-event:not([data-event=event-6]), .mobile .cd-schedule-wrap.event-6 .single-event:not([data-event=event-6])
+  display: none !important
+
+.cd-schedule-wrap.event-7 .single-event:not([data-event=event-7])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-7 .single-event:not([data-event=event-7]), .tablet .cd-schedule-wrap.event-7 .single-event:not([data-event=event-7]), .mobile .cd-schedule-wrap.event-7 .single-event:not([data-event=event-7])
+  display: none !important
+
+.cd-schedule-wrap.event-8 .single-event:not([data-event=event-8])
+  opacity: 0 !important
+  pointer-events: none
+
+.devices .cd-schedule-wrap.event-8 .single-event:not([data-event=event-8]), .tablet .cd-schedule-wrap.event-8 .single-event:not([data-event=event-8]), .mobile .cd-schedule-wrap.event-8 .single-event:not([data-event=event-8])
+  display: none !important
+
+* + .cd-schedule-wrap
+  margin-top: 30px

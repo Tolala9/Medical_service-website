@@ -17,6 +17,7 @@ import Counter 							from './modules/counter';
 import ProgressLinear 			from './modules/progress-linear';
 import ProgressBarCircle 		from './modules/progress-bar-circle';
 import DateCountdown		 		from './modules/date-countdown';
+import Schedule					 		from './modules/cd-schedule';
 // import Scroller		 					from './modules/scroller';
 
 
@@ -37,6 +38,7 @@ var counterAnimate 			= new Counter();
 var progressLinear 			= new ProgressLinear();
 var progressBarCircle 	= new ProgressBarCircle();
 var dateCountdown 			= new DateCountdown();
+var schedule 						= new Schedule();
 // var scroller 			      = new Scroller();
 
 
